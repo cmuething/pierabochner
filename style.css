@@ -1,0 +1,13 @@
+@media (min-width: 1020px) {
+
+}
+
+@media (max-width: 1020px) {
+	#video iframe {
+		top:0 !important;
+	}
+/*
+	h1 {
+		color: blue;
+	}	*/
+}
