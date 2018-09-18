@@ -1,13 +1,35 @@
-@media (min-width: 1020px) {
+@font-face {
+    font-family: "Akkurat";
+    src: url("fonts/akkurat-bold.otf");
+}
+
+@media (max-width: ) {
 
 }
 
-@media (max-width: 1020px) {
-	#video iframe {
-		top:0 !important;
+@media (max-width: 1000px) {
+	.logo {
+		width: 250px !important;
 	}
-/*
-	h1 {
-		color: blue;
-	}	*/
+
+	.menu-items {
+		font-size: 24px !important;
+		height: 95px !important;
+	}
+
+	.pop-up {
+		font-size: 2em;
+		margin-top: 30% !important;
+	}
+
+	#video {
+		top: 5% !important;
+		left: -15% !important;
+		width: 120% !important;
+		height: 120% !important; 
+	}
+
+	#video-frame {
+		padding:100% 0 0 0; 
+	}
 }
