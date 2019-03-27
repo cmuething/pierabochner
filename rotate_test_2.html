@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Candle rotation test</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #000;
+				color: #fff;
+				margin: 0px;
+				overflow: hidden;
+			}
+
+			/*nav {
+				position: fixed;
+			}*/
+
+			.logo {
+				width: 150px;
+				margin-top: 15px;
+				margin-left: 15px;
+			}
+
+			.slider {
+				height: 100%;
+			}
+
+			.gradient {
+				background-image: url(gradient.png);
+				position: absolute;
+				left: 50%;
+				margin-left: -215px;
+				z-index: 5;
+/*				background-color: red;
+*/				bottom: 21px;
+/*				opacity: .5;
+*/				mix-blend-mode: multiply;
+				height: 500px;
+				width: 500px;
+				pointer-events: none;
+			}
+
+			#video { position:relative; display:inline-block; height: 500px; width: 100%; margin-top: 175px; margin-left: 15px;}
+		    /*#video-frame { padding:100% 100% 0 0; position:fixed; width:100%; height:100%; left: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -1; background-color: black;}*/
+
+		</style>
+	</head>
+
+	<body>
+		
+		<nav>
+			<div class="logo">
+				<a href="https://www.instagram.com/piboch/?hl=en" target="_blank">
+					<img src="img/piera-01.svg">
+				</a>
+			</div>
+
+			<!-- <div class="menu-items">
+				<div class="table">
+					<ul id="horizontal-list">
+						<li>Archive</li>
+						<li>About</li>
+						<li>Contact</li>
+					</ul>
+				</div>
+			</div> -->
+		</nav>
+
+		<!-- <div id="video-frame">
+			<iframe id="video" src="https://player.vimeo.com/video/290171567?api=1&background=1&autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+			</iframe>
+		</div> -->
+
+		<div class="slider">
+			<ul>
+				
+				<a>
+					<div class="gradient"></div>
+					<iframe id="video" src="https://player.vimeo.com/video/326728566" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+					</iframe>
+				</a>
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="js/jquery.mousewheel.js"></script>
+
+		<script type="text/javascript">
+
+		</script>
+
+	</body>	
