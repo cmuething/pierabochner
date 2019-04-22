@@ -12,7 +12,7 @@
 				margin: 0px;
                 overscroll-behavior: none;
 			}
-
+            
 			nav {
 				position: fixed;
                 z-index: 10;
@@ -61,23 +61,83 @@
                 width: 100%;
                 padding-left: 50px;
             }
-
-			.gradient {
-				background-image: url(gradient.png);
-				position: absolute;
-				margin-left: 50px;
+            
+            .no-gradient {
+                opacity: 0;
+                position: absolute;
+				margin-left: 75px;
+				z-index: 5;
+				height: 100%;
+				width: 90%;
+            }
+            
+            .no-gradient:hover {
+                opacity: 1;
+                background: linear-gradient(-180deg, #EE7752, #23A6D5, #23D5AB, #EE7752, #E73C7E, #23A6D5, #23D5AB, #EE7752, #23D5AB, #EE7752, #E73C7E, #23A6D5);
+	            background-size: 200% 200%;
+	           -webkit-animation: gradient 15s ease infinite;
+	           -moz-animation: gradient 15s ease infinite;
+	           animation: gradient 15s ease infinite;
+                position: absolute;
+				margin-left: 75px;
 				z-index: 5;
 				mix-blend-mode: multiply;
 				height: 100%;
-				width: 100%;
-/*				pointer-events: none;*/
+				max-width: 90%;
                 overflow: hidden;
-			}
+            }  
+            
+            
+            @keyframes gradient {
+                0% {background-position: 0% 10%;}
+                25% {background-position: 0% 30%;}
+                50% {background-position: 0% 70%;}
+                75% {background-position: 0% 90%;}
+                100% {background-position: 0% 100%;}
+            }
+             
+/*
+            @-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
 
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+*/
+
+/*
+			.no-gradient:hover {
+				background-image: url(gradient.png);
+				mix-blend-mode: multiply;
+                position: absolute;
+				margin-left: 50px;
+				z-index: 5;
+				height: 100%;
+				width: 100%;
+			}
+*/
+            
 			#video-1 { 
                 height: 100%; 
                 width: 100%; 
-/*                margin-top: 175px; */
+				pointer-events: none;
                 margin-left: 50px;
                 margin-right: 50px;
             }
@@ -85,12 +145,10 @@
             #video-2 { 
                 height: 100%; 
                 width: 100%; 
-/*                margin-top: 175px; */
+				pointer-events: none;
                 margin-left: 50px;
                 margin-right: 50px;
             }
-            
-/*		    #video-frame { padding:100% 100% 0 0; position:fixed; width:100%; height:100%; left: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -1; background-color: black;}*/
 
 		</style>
 	</head>
@@ -98,8 +156,16 @@
     <html>
 	<body>
         
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="js/jquery.mousewheel.js"></script>
+        
+<!--
+        <script type="text/javascript">
+            $(".no-gradient").hover(function () {
+                $(this).toggleClass("gradient");
+            });
+        </script>
+-->
         
 		<script type="text/javascript">
             $(function() {
@@ -114,6 +180,14 @@
 
             });
 		</script>
+        
+        <script>
+        window.onload = function() {
+ setTimeout (function () {
+  scrollTo(0,0);
+ }, 100); //100ms for example
+}
+        </script>
         
 		<nav>
 			<div class="logo">
@@ -133,13 +207,12 @@
 			</div> -->
 		</nav>
 
-        <div class="slider-wrap">
             <div class="slider">
                 <div class="slide">
                     <a href="https://www.pierabochner.com/product/romanesco" target="_blank">
                         <p>Candle Title #1</p>
-                        <div class="gradient"></div>
-                        <iframe id="video-1" src="https://player.vimeo.com/video/331697585?autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        <div class="no-gradient"></div>
+                        <iframe id="video-1" src="https://player.vimeo.com/video/331697585?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                         </iframe>
                     </a>
                 </div>
@@ -147,8 +220,8 @@
                 <div class="slide">
                     <a href="https://www.pierabochner.com/product/16" target="_blank">
                         <p>Candle Title #2</p>
-                        <div class="gradient"></div>
-                        <iframe id="video-2" src="https://player.vimeo.com/video/331697594?autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        <div class="no-gradient"></div>
+                        <iframe id="video-2" src="https://player.vimeo.com/video/331697594?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                         </iframe>
                     </a>
                 </div>
@@ -156,8 +229,8 @@
                 <div class="slide">
                     <a href="https://www.pierabochner.com/product/romanesco" target="_blank">
                         <p>Candle Title #3</p>
-                        <div class="gradient"></div>
-                        <iframe id="video-1" src="https://player.vimeo.com/video/331697585?autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        <div class="no-gradient"></div>
+                        <iframe id="video-1" src="https://player.vimeo.com/video/331697585?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                         </iframe>
                     </a>
                 </div>
@@ -165,8 +238,8 @@
                 <div class="slide">
                     <a href="https://www.pierabochner.com/product/16" target="_blank">
                         <p>Candle Title #4</p>
-                        <div class="gradient"></div>
-                        <iframe id="video-2" src="https://player.vimeo.com/video/331697594?autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        <div class="no-gradient"></div>
+                        <iframe id="video-2" src="https://player.vimeo.com/video/331697594?autoplay=1&loop=1&autopause=0&background=1" width="640" height="1278" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                         </iframe>
                     </a>
                 </div>
@@ -174,8 +247,8 @@
                 <div class="slide">
                     <a href="https://www.pierabochner.com/product/romanesco" target="_blank">
                         <p>Candle Title #5</p>
-                        <div class="gradient"></div>
-                        <iframe id="video-1" src="https://player.vimeo.com/video/331697585?autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        <div class="no-gradient"></div>
+                        <iframe id="video-1" src="https://player.vimeo.com/video/331697585?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                         </iframe>
                     </a>
                 </div>
@@ -183,13 +256,12 @@
                 <div class="slide">
                     <a href="https://www.pierabochner.com/product/16" target="_blank">
                         <p>Candle Title #6</p>
-                        <div class="gradient"></div>
-                        <iframe id="video-2" src="https://player.vimeo.com/video/331697594?autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        <div class="no-gradient"></div>
+                        <iframe id="video-2" src="https://player.vimeo.com/video/331697594?autoplay=1&loop=1&autopause=0&background=1" width="640" height="1278" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                         </iframe>
                     </a>
                 </div>
                 
             </div>
-        </div>
 	</body>	
     </html>
