@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Candle Grid Test</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #000;
+				color: #fff;
+				margin: 0px;
+                overscroll-behavior: none;
+			}
+            
+			nav {
+				position: fixed;
+                z-index: 25;
+                width: 100%;
+/*                background-color: black;*/
+			}
+
+			.logo {
+				width: 150px;
+				margin-top: 15px;
+				margin-left: 15px;
+			}
+
+            .container {
+                position: fixed;
+                display: inline-block;
+                cursor: pointer;
+                top: 0;
+                right: 0;
+                margin-top: 15px;
+                margin-right: 20px;
+                z-index: 26;
+            }
+
+            .bar1, .bar2, .bar3 {
+                width: 35px;
+                height: 5px;
+                background-color: #454545;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+
+            .open {
+                background-color: #ffffff;
+            }
+
+            .change {
+                background-color: #000000;
+            }
+
+            /* The side navigation menu */
+            .sidenav {
+              height: 100%; /* 100% Full-height */
+              width: 0px; /* 0 width - change this with JavaScript */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Stay on top */
+              top: 0; /* Stay at the top */
+              right: 0;
+              background-color: #ffffff; /* Black*/
+              overflow-x: hidden; /* Disable horizontal scroll */
+              padding-top: 60px; /* Place content 60px from the top */
+              transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+            }
+
+            .toggled {
+                width: 350px;
+            }
+
+			h1 {
+				text-align: center;
+				color: white;
+				font-size: 48px;
+				font-family: monospace;
+				text-transform: uppercase;
+			}
+
+			.title {
+				position: fixed;
+				left: 50%;
+				top: 35px;
+				transform: translate(-50%, -50%);
+			}
+
+			.close {
+				position: fixed;
+				color: white;
+				font-size: 16px;
+				font-family: monospace;
+				text-transform: uppercase;
+				bottom: 15px;
+				left: 20px;
+				z-index: 26;
+			}
+
+			a:link {
+				text-decoration: none;
+			}
+
+			.row {
+				display: flex;
+				flex-wrap: wrap;
+				padding: 100px 0 0 100px;
+			}
+
+			.column {
+				flex: 50%;
+				padding: 0 4px;
+			}
+
+			.column img {
+				width: 30%;
+				margin-bottom: 50px;
+				vertical-align: middle;
+			}
+
+			.small-candle-rotate {
+				width: 100px;
+				height: 100%;
+				position: fixed;
+				margin-top: 10%;
+				z-index: 1;
+			}
+
+			.small-candle-rotate iframe {
+				width: 100px;
+			}
+
+		</style>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>
+
+        <script type="text/javascript">
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#mySidenav").toggleClass("toggled");
+                    var icon = $(this).parent().find(".container")
+                    if (icon.hasClass('open'))
+                        icon.removeClass('open').addClass('change');
+                    else
+                        icon.removeClass('change').addClass('open');
+            });
+        </script>
+
+	</head>
+
+	<body>
+
+		<nav>
+			<div class="logo">
+				<a href="https://www.instagram.com/piboch/?hl=en" target="_blank">
+					<img src="img/piera-01.svg">
+				</a>
+			</div>
+
+			<div id="menu-toggle" class="container open">
+		        <div class="bar1"></div>
+		        <div class="bar2"></div>
+		        <div class="bar3"></div>
+        	</div>
+
+			<div id="mySidenav" class="sidenav">
+				<div class="table">
+					<a href="#">Archive</a>
+					<a href="#">About</a>
+					<a href="#">Contact</a>
+				</div>
+			</div>
+		</nav>
+
+		<div id="candle-type" class="title">
+			<h1>Species Name<h1>
+		</div>
+
+		<div class="close">
+			<a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test.html#">Close</a>
+		</div>
+
+		<div id="candle-menu" class="small-candle-rotate">
+		        	<a href="https://www.pierabochner.com/product/16" target="_blank">
+<!--                         <p>Candle Title #4</p>
+ -->                        <div class="no-gradient"></div>
+                        <iframe id="video-2" src="https://player.vimeo.com/video/331697594?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+                        </iframe>
+                    </a>
+					<a href="https://www.pierabochner.com/product/16" target="_blank">
+<!-- 		                <p>Candle Title #6</p>
+ -->		                <div class="no-gradient"></div>
+		                <iframe id="video-2" src="https://player.vimeo.com/video/341705655?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+		                </iframe>
+		            </a>
+		        	<a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
+<!--                         <p>Candle Title #5</p>
+ -->                        <div class="no-gradient"></div>
+                        <iframe id="video-1" src="https://player.vimeo.com/video/331697585?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        </iframe>
+                    </a>
+		</div>
+
+		<div class="row">
+			<div class="column">
+				<img src="img/candle_01.png">
+				<img src="img/candle_01.png">
+				<img src="img/candle_01.png">
+			</div>
+			<div class="column">
+				<img src="img/candle_01.png">
+				<img src="img/candle_01.png">
+				<img src="img/candle_01.png">
+			</div>
+			<div class="column">
+				<img src="img/candle_01.png">
+				<img src="img/candle_01.png">
+				<img src="img/candle_01.png">
+			</div>
+		</div>	
+
+	</body>
+</html>
