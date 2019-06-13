@@ -38,20 +38,37 @@
             }
 
             .bar1, .bar2, .bar3 {
+            	background-color: #fff;
                 width: 35px;
                 height: 5px;
-                background-color: #454545;
                 margin: 6px 0;
                 transition: 0.4s;
             }
 
             .open {
-                background-color: #ffffff;
+            	filter: invert(0%);
             }
 
             .change {
-                background-color: #000000;
+            	filter: invert(100%);
             }
+
+            /* Rotate first bar */
+			.change .bar1 {
+			  -webkit-transform: rotate(-45deg) translate(-9px, 7px) ;
+			  transform: rotate(-45deg) translate(-9px, 7px) ;
+			}
+
+			/* Fade out the second bar */
+			.change .bar2 {
+			  opacity: 0;
+			}
+
+			/* Rotate last bar */
+			.change .bar3 {
+			  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+			  transform: rotate(45deg) translate(-8px, -8px) ;
+			}
 
             /* The side navigation menu */
             .sidenav {
@@ -63,12 +80,25 @@
               right: 0;
               background-color: #ffffff; /* Black*/
               overflow-x: hidden; /* Disable horizontal scroll */
-              padding-top: 60px; /* Place content 60px from the top */
-              transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+              padding-top: 30px; /* Place content 60px from the top */
+              transition: 0s; /* 0.5 second transition effect to slide in the sidenav */
             }
 
             .toggled {
                 width: 350px;
+            }
+
+            .table {
+            	display: inline-block;
+            	padding-left: 30px;
+            	color: white;
+				font-size: 16px;
+				font-family: monospace;
+				text-transform: uppercase;
+            }
+
+            .table a {
+            	display: block;
             }
 
 			h1 {
@@ -101,6 +131,29 @@
 				text-decoration: none;
 			}
 
+			.background-color {
+				color: #000;
+				text-align: center;
+				font-size: 18px;
+				width: 25px;
+				height: 25px;
+				background-color: white;
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				z-index: 26;
+			}
+
+			.black {
+				background-color: #000;
+				filter: invert(0%);
+			}
+
+			.white {
+				background-color: #fff;
+				filter: invert(100%);
+			}
+
 			.row {
 				display: flex;
 				flex-wrap: wrap;
@@ -119,8 +172,8 @@
 			}
 
 			.small-candle-rotate {
-				width: 100px;
-				height: 100%;
+/*				width: 100px;
+*/				height: 100%;
 				position: fixed;
 				margin-top: 10%;
 				z-index: 1;
@@ -136,6 +189,8 @@
         <script src="js/jquery.mousewheel.js"></script>
 
         <script type="text/javascript">
+        	$( document ).ready(function() {
+			    console.log( "ready!" );
             $("#menu-toggle").click(function(e) {
                 e.preventDefault();
                 $("#mySidenav").toggleClass("toggled");
@@ -145,6 +200,21 @@
                     else
                         icon.removeClass('change').addClass('open');
             });
+			});
+        </script>
+
+        <script type="text/javascript">
+        	$( document ).ready(function() {
+			    console.log( "ready!" );
+			    $("#background-color-toggle").click(function(e) {
+                e.preventDefault();
+                    var icon = $(this).find("body")
+                    if (icon.hasClass('black'))
+                        icon.removeClass('black').addClass('white');
+                    else
+                        icon.removeClass('white').addClass('black');
+            });
+			});
         </script>
 
 	</head>
@@ -166,6 +236,7 @@
 
 			<div id="mySidenav" class="sidenav">
 				<div class="table">
+					<a href="#">Shop</a>
 					<a href="#">Archive</a>
 					<a href="#">About</a>
 					<a href="#">Contact</a>
@@ -179,6 +250,10 @@
 
 		<div class="close">
 			<a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test.html#">Close</a>
+		</div>
+
+		<div id="background-color-toggle" class="background-color">
+			<a href="">?</a>
 		</div>
 
 		<div id="candle-menu" class="small-candle-rotate">

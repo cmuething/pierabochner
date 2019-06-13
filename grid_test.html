@@ -34,22 +34,44 @@
                 right: 0;
                 margin-top: 15px;
                 margin-right: 20px;
+                z-index: 26;
             }
 
             .bar1, .bar2, .bar3 {
+                background-color: #fff;
                 width: 35px;
                 height: 5px;
-                background-color: #454545;
                 margin: 6px 0;
                 transition: 0.4s;
             }
 
             .open {
-                background-color: #ffffff;
+                filter: invert(0%);
             }
 
             .change {
-                background-color: #000000;
+                filter: invert(100%);
+            }
+
+            /* Rotate first bar */
+            .change .bar1 {
+              -webkit-transform: rotate(-45deg) translate(-9px, 7px) ;
+              transform: rotate(-45deg) translate(-9px, 7px) ;
+            }
+
+            /* Fade out the second bar */
+            .change .bar2 {
+              opacity: 0;
+            }
+
+            /* Rotate last bar */
+            .change .bar3 {
+              -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+              transform: rotate(45deg) translate(-8px, -8px) ;
+            }
+
+            a:link {
+                text-decoration: none;
             }
 
             /* The side navigation menu */
@@ -62,49 +84,26 @@
               right: 0;
               background-color: #ffffff; /* Black*/
               overflow-x: hidden; /* Disable horizontal scroll */
-              padding-top: 60px; /* Place content 60px from the top */
-              transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+              padding-top: 30px; /* Place content 60px from the top */
+              transition: 0s; /* 0.5 second transition effect to slide in the sidenav */
             }
 
             .toggled {
                 width: 350px;
             }
 
-            /* The navigation menu links */
-            /*.sidenav a {
-              padding: 8px 8px 8px 32px;
-              text-decoration: none;
-              font-size: 25px;
-              color: #818181;
-              display: block;
-              transition: 0.3s;
-            }*/
+            .table {
+                display: inline-block;
+                padding-left: 30px;
+                color: white;
+                font-size: 16px;
+                font-family: monospace;
+                text-transform: uppercase;
+            }
 
-            /* Position and style the close button (top right corner) */
-            /*.sidenav .closebtn {
-              position: absolute;
-              top: 0;
-              right: 25px;
-              font-size: 36px;
-              margin-left: 50px;
-            }*/
-
-            /* Rotate first bar */
-            /*.change .bar1 {
-              -webkit-transform: rotate(-45deg) translate(-9px, 7px) ;
-              transform: rotate(-45deg) translate(-9px, 7px) ;
-            }*/
-
-            /* Fade out the second bar */
-            /*.change .bar2 {
-              opacity: 0;
-            }*/
-
-            /* Rotate last bar */
-            /*.change .bar3 {
-              -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-              transform: rotate(45deg) translate(-8px, -8px) ;
-            }*/
+            .table a {
+                display: block;
+            }
 
 			.slider-wrap {
 				height: 100%;
@@ -199,6 +198,8 @@
         <script src="js/jquery.mousewheel.js"></script>
 
         <script type="text/javascript">
+            $( document ).ready(function() {
+                console.log( "ready!" );
             $("#menu-toggle").click(function(e) {
                 e.preventDefault();
                 $("#mySidenav").toggleClass("toggled");
@@ -207,6 +208,7 @@
                         icon.removeClass('open').addClass('change');
                     else
                         icon.removeClass('change').addClass('open');
+            });
             });
         </script>
 
@@ -251,6 +253,7 @@
 
 			<div id="mySidenav" class="sidenav">
 				<div class="table">
+                    <a href="#">Shop</a>
 					<a href="#">Archive</a>
 					<a href="#">About</a>
 					<a href="#">Contact</a>
