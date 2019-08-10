@@ -189,8 +189,10 @@
         <script src="js/jquery.mousewheel.js"></script>
 
         <script type="text/javascript">
+        //wait until everything is loaded, including jquery
         	$( document ).ready(function() {
 			    console.log( "ready!" );
+		//open and close the hamburger menu
             $("#menu-toggle").click(function(e) {
                 e.preventDefault();
                 $("#mySidenav").toggleClass("toggled");
@@ -204,6 +206,7 @@
         </script>
 
         <script type="text/javascript">
+        //changing the background color, not working yet
         	$( document ).ready(function() {
 			    console.log( "ready!" );
 			    $("#background-color-toggle").click(function(e) {

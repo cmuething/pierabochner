@@ -198,8 +198,10 @@
         <script src="js/jquery.mousewheel.js"></script>
 
         <script type="text/javascript">
+        //wait until everything is loaded, including jquery
             $( document ).ready(function() {
                 console.log( "ready!" );
+        //open and close the hamburger menu
             $("#menu-toggle").click(function(e) {
                 e.preventDefault();
                 $("#mySidenav").toggleClass("toggled");
@@ -213,6 +215,7 @@
         </script>
 
         <script type="text/javascript">
+        //scroll horizontally on vertical scrolling
             $(function() {
 
             $("html, body").mousewheel(function(event, delta) {
@@ -226,11 +229,12 @@
             });
         </script>
         
-        <script>
+        <script type="text/javascript">
+        //return to beginning of the carousel on load
             window.onload = function() {
              setTimeout (function () {
               scrollTo(0,0);
-             }, 100); //100ms for example
+             }, 100);
             }
         </script>
         
@@ -244,13 +248,11 @@
 					<img src="img/piera-01.svg">
 				</a>
 			</div>
-
             <div id="menu-toggle" class="container open">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
-
 			<div id="mySidenav" class="sidenav">
 				<div class="table">
                     <a href="#">Shop</a>
