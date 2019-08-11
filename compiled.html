@@ -61,14 +61,15 @@
             function myFunction() {
               if (window.pageYOffset > sticky) {
                     $('nav').addClass('fixed-header');
-                    // $('#myIntro').addClass('fixed');
-                    // $("html, body").mousewheel(function(event, delta) {
+                    $('#video-frame').addClass('fixed');
+                    // $('#myCarousel').addClass('fixed');
+                    $("html, body").mousewheel(function(event, delta) {
 
-                    // this.scrollLeft -= (delta * .5);
+                    this.scrollLeft -= (delta * .5);
             
-                    // event.preventDefault();
+                    event.preventDefault();
 
-                    // });
+                    });
                 }
                 else {
                     $('nav').removeClass('fixed-header');
