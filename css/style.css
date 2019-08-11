@@ -191,7 +191,7 @@ a:link {
 
 .no-gradient:hover {
     opacity: 1;
-    background: linear-gradient(-180deg, #EE7752, #23A6D5, #23D5AB, #EE7752, #E73C7E, #23A6D5, #23D5AB, #EE7752, #23D5AB, #EE7752, #E73C7E, #23A6D5);
+    /*background: linear-gradient(-180deg, #EE7752, #23A6D5, #23D5AB, #EE7752, #E73C7E, #23A6D5, #23D5AB, #EE7752, #23D5AB, #EE7752, #E73C7E, #23A6D5);*/
     background-size: 200% 200%;
    -webkit-animation: gradient 15s ease infinite;
    -moz-animation: gradient 15s ease infinite;

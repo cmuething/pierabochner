@@ -63,13 +63,13 @@
                     $('nav').addClass('fixed-header');
                     $('#video-frame').addClass('fixed');
                     // $('#myCarousel').addClass('fixed');
-                    $("html, body").mousewheel(function(event, delta) {
+                    // $("html, body").mousewheel(function(event, delta) {
 
-                    this.scrollLeft -= (delta * .5);
+                    // this.scrollLeft -= (delta * .5);
             
-                    event.preventDefault();
+                    // event.preventDefault();
 
-                    });
+                    // });
                 }
                 else {
                     $('nav').removeClass('fixed-header');
@@ -89,7 +89,32 @@
         //         }
         //     });
         // </script>
-        
+
+        <script type="text/javascript">
+                var randomColourOne;
+                var randomColourTwo;
+                var randomColourThree;
+                var randomColourFour;
+                var randomColourFive;
+                var randomColourSix;
+
+                function firstColour(){
+                    randomColourOne = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+                    
+                    randomColourTwo = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+                
+                    randomColourThree = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+
+                    randomColourFour = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+                    
+                    randomColourFive = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+                
+                    randomColourSix = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+                    
+                    var background = document.getElementById("background");
+                    background.style.backgroundImage = "-webkit-linear-gradient("+ randomColourOne +" , "+ randomColourTwo +" ,  "+ randomColourThree +" , "+ randomColourFour +" , "+ randomColourFive +" , "+ randomColourSix +")";
+                }
+        </script>
 	</head>
 
 	<body>
@@ -127,7 +152,7 @@
             <div class="slide">
                 <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
                     <p>Candle Title #1</p>
-                    <div class="no-gradient"></div>
+                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
                     <iframe id="video-1" src="https://player.vimeo.com/video/331697585?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
                 </a>
@@ -136,7 +161,7 @@
             <div class="slide">
                 <a href="https://www.pierabochner.com/product/16" target="_blank">
                     <p>Candle Title #2</p>
-                    <div class="no-gradient"></div>
+                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
                     <iframe id="video-2" src="https://player.vimeo.com/video/331697594?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                     </iframe>
                 </a>
@@ -145,7 +170,7 @@
             <div class="slide">
                 <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
                     <p>Candle Title #3</p>
-                    <div class="no-gradient"></div>
+                    <div class="no-gradient" id="background"></div>
                     <iframe id="video-1" src="https://player.vimeo.com/video/341705655?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
                 </a>
@@ -154,7 +179,7 @@
             <div class="slide">
                 <a href="https://www.pierabochner.com/product/16" target="_blank">
                     <p>Candle Title #4</p>
-                    <div class="no-gradient"></div>
+                    <div class="no-gradient" id="background"></div>
                     <iframe id="video-2" src="https://player.vimeo.com/video/331697594?autoplay=1&loop=1&autopause=0&background=1" width="640" height="1278" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                     </iframe>
                 </a>
@@ -163,7 +188,7 @@
             <div class="slide">
                 <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
                     <p>Candle Title #5</p>
-                    <div class="no-gradient"></div>
+                    <div class="no-gradient" id="background"></div>
                     <iframe id="video-1" src="https://player.vimeo.com/video/331697585?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
                 </a>
@@ -172,7 +197,7 @@
             <div class="slide">
                 <a href="https://www.pierabochner.com/product/16" target="_blank">
                     <p>Candle Title #6</p>
-                    <div class="no-gradient"></div>
+                    <div class="no-gradient" id="background"></div>
                     <iframe id="video-2" src="https://player.vimeo.com/video/341705655?autoplay=1&loop=1&autopause=0&background=1" width="640" height="1278" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                     </iframe>
                 </a>
