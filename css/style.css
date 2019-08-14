@@ -166,6 +166,7 @@ a:link {
 }
 
 .slide a {
+    pointer-events: cursor;
 }
 
 .slide p {
@@ -192,10 +193,10 @@ a:link {
 .no-gradient:hover {
     opacity: 1;
     /*background: linear-gradient(-180deg, #EE7752, #23A6D5, #23D5AB, #EE7752, #E73C7E, #23A6D5, #23D5AB, #EE7752, #23D5AB, #EE7752, #E73C7E, #23A6D5);*/
-    background-size: 200% 200%;
-   -webkit-animation: gradient 15s ease infinite;
+    background-size: 200% 100%;
+/*   -webkit-animation: gradient 15s ease infinite;
    -moz-animation: gradient 15s ease infinite;
-   animation: gradient 15s ease infinite;
+   animation: gradient 15s ease infinite;*/
     position: absolute;
 	margin-left: 75px;
 	z-index: 5;
