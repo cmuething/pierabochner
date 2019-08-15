@@ -50,6 +50,7 @@
         </script>
 
         <script type="text/javascript">
+        //temporary fix, now the user cannot scroll back to the video because there is no else
             $( document ).ready(function() {
                 console.log( "ready!" );
 
@@ -61,37 +62,42 @@
             function myFunction() {
               if (window.pageYOffset > sticky) {
                     $('nav').addClass('fixed-header');
-                    // $('#video-frame').addClass('fixed');
-                    // $('#myCarousel').addClass('fixed');
-                    // $("html, body").mousewheel(function(event, delta) {
+                    $('#myIntro').addClass('fixed-video');
+                    // $('#myCarousel').addClass('fixed-carousel');
+                    $("html, body").mousewheel(function(event, delta) {
 
-                    // this.scrollLeft -= (delta * .5);
-            
-                    // event.preventDefault();
+                    this.scrollLeft -= (delta * .5);
 
-                    // });
+                    event.preventDefault();
+
+                    });
                 }
-                else {
-                    $('nav').removeClass('fixed-header');
-                }
+                // else {
+                //     $('nav').removeClass('fixed-header');
+                // }
             }
             });
         </script>
 
         <script type="text/javascript">
-            window.onscroll = function() {myFunction2()};
+        //test to fix the carousel when you get all the way to the right
+            // $( document ).ready(function() {
+            //     console.log( "ready!" );
 
-            var carousel = document.getElementById("myCarousel");
-            var sticky = carousel.offsetRight;
+            // window.onscroll = function() {myFunction2()};
 
-            function myFunction() {
-              if (window.pageXOffset > sticky) {
-                    $('.slider').addClass('fixed');
-                }
-                else {
-                    $('.slider').removeClass('fixed');
-                }
-            }
+            // var carousel = document.getElementById("myCarousel");
+            // var sticky = carousel.offsetRight;
+
+            // function myFunction2() {
+            //   if (window.pageXOffset > sticky) {
+            //         $('.slider').addClass('fixed');
+            //     }
+            //     else {
+            //         $('.slider').removeClass('fixed');
+            //     }
+            // }
+            // });
         </script>
 
         <script type="text/javascript">

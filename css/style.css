@@ -158,12 +158,16 @@ a:link {
     position: relative;
     display: inline-block;
     height: 100%;
-    width: 40%;
+    width: 25%;
 }
 
-.fixed {
-    overflow-y: hidden;
+.fixed-video {
+    position: fixed;
     opacity: 0;
+}
+
+.fixed-carousel {
+    position: fixed;
 }
 
 .slide {
