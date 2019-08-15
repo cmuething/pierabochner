@@ -51,13 +51,14 @@
 
         <script type="text/javascript">
         //temporary fix, now the user cannot scroll back to the video because there is no else
+        //sticky has 50 added to it to prevent the video from flashing away, but now the header doesn't really stick...ADD DELAY?
             $( document ).ready(function() {
                 console.log( "ready!" );
 
             window.onscroll = function() {myFunction()};
 
             var header = document.getElementById("myHeader");
-            var sticky = header.offsetTop;
+            var sticky = header.offsetTop + 50;
 
             function myFunction() {
               if (window.pageYOffset > sticky) {
@@ -193,36 +194,37 @@
 
             <div class="slide">
                 <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
-                    <p>Candle Title #1</p>
+                    <p>Candle Title #3</p>
                     <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
-                    <iframe id="video-1" src="https://player.vimeo.com/video/331697585?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    <iframe id="video-1" src="https://player.vimeo.com/video/353941600?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
                 </a>
             </div>
-            
+
             <div class="slide">
                 <a href="https://www.pierabochner.com/product/16" target="_blank">
                     <p>Candle Title #2</p>
-                    <div class="no-gradient" id="background"></div>
-                    <iframe id="video-2" src="https://player.vimeo.com/video/331697594?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
+                    <iframe id="video-2" src="https://player.vimeo.com/video/353941619?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                     </iframe>
                 </a>
             </div>
                 
             <div class="slide">
                 <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
-                    <p>Candle Title #3</p>
-                    <div class="no-gradient" id="background"></div>
-                    <iframe id="video-1" src="https://player.vimeo.com/video/341705655?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    <p>Candle Title #1</p>
+                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
+                    <iframe id="video-1" src="https://player.vimeo.com/video/353941609?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
                 </a>
             </div>
+            
                 
             <div class="slide">
                 <a href="https://www.pierabochner.com/product/16" target="_blank">
                     <p>Candle Title #4</p>
-                    <div class="no-gradient" id="background"></div>
-                    <iframe id="video-2" src="https://player.vimeo.com/video/331697594?autoplay=1&loop=1&autopause=0&background=1" width="640" height="1278" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
+                    <iframe id="video-2" src="https://player.vimeo.com/video/353941592?autoplay=1&loop=1&autopause=0&background=1" width="640" height="1278" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                     </iframe>
                 </a>
             </div>
@@ -230,20 +232,12 @@
             <div class="slide">
                 <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
                     <p>Candle Title #5</p>
-                    <div class="no-gradient" id="background"></div>
-                    <iframe id="video-1" src="https://player.vimeo.com/video/331697585?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
+                    <iframe id="video-1" src="https://player.vimeo.com/video/353942237?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
                 </a>
             </div>
                 
-            <div class="slide">
-                <a href="https://www.pierabochner.com/product/16" target="_blank">
-                    <p>Candle Title #6</p>
-                    <div class="no-gradient" id="background"></div>
-                    <iframe id="video-2" src="https://player.vimeo.com/video/341705655?autoplay=1&loop=1&autopause=0&background=1" width="640" height="1278" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-                    </iframe>
-                </a>
-            </div>  
         </div>
 	</body>	
     </html>
