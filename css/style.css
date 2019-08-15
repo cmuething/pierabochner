@@ -154,8 +154,15 @@ a:link {
     height: 100vh;
 }
 
+.gap {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 40%;
+}
+
 .fixed {
-    position: fixed;
+    overflow-y: hidden;
     opacity: 0;
 }
 

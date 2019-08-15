@@ -79,6 +79,22 @@
         </script>
 
         <script type="text/javascript">
+            window.onscroll = function() {myFunction2()};
+
+            var carousel = document.getElementById("myCarousel");
+            var sticky = carousel.offsetRight;
+
+            function myFunction() {
+              if (window.pageXOffset > sticky) {
+                    $('.slider').addClass('fixed');
+                }
+                else {
+                    $('.slider').removeClass('fixed');
+                }
+            }
+        </script>
+
+        <script type="text/javascript">
         //initial test to add sticky header nav
         //     $(window).scroll(function(){
         //         if ($(window).scrollTop() >= 600) {
@@ -166,6 +182,9 @@
         </div>
 
         <div class="slider" id="myCarousel">
+            <div class="gap">
+            </div>
+
             <div class="slide">
                 <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
                     <p>Candle Title #1</p>
