@@ -1,57 +1,243 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<link rel="stylesheet" href="style.css">
-		<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+		<title>Candle Grid Test</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>
+        <script type="text/javascript">
+        //wait until everything is loaded, including jquery
+            $( document ).ready(function() {
+                console.log( "ready!" );
+        //open and close the hamburger menu
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#mySidenav").toggleClass("toggled");
+                    var icon = $(this).parent().find(".container")
+                    if (icon.hasClass('open'))
+                        icon.removeClass('open').addClass('change');
+                    else
+                        icon.removeClass('change').addClass('open');
+            });
+            });
+        </script>
+
+        <script type="text/javascript">
+        //scroll horizontally on vertical scrolling
+            // $(function() {
+
+            // $("html, body").mousewheel(function(event, delta) {
+
+            // this.scrollLeft -= (delta * .5);
+    
+            // event.preventDefault();
+
+            //    });
+
+            // });
+        </script>
+        
+        <script type="text/javascript">
+        //return to beginning of the carousel on load
+            window.onload = function() {
+             setTimeout (function () {
+              scrollTo(0,0);
+             }, 100);
+            }
+        </script>
+
+        <script type="text/javascript">
+        //temporary fix, now the user cannot scroll back to the video because there is no else
+        //sticky has 50 added to it to prevent the video from flashing away, but now the header doesn't really stick...ADD DELAY?
+            $( document ).ready(function() {
+                console.log( "ready!" );
+
+            window.onscroll = function() {myFunction()};
+
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop + 50;
+
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                    $('nav').addClass('fixed-header');
+                    $('#myIntro').addClass('fixed-video');
+                    // $('#myCarousel').addClass('fixed-carousel');
+                    $("html, body").mousewheel(function(event, delta) {
+
+                    this.scrollLeft -= (delta * .5);
+
+                    event.preventDefault();
+
+                    });
+                }
+                // else {
+                //     $('nav').removeClass('fixed-header');
+                // }
+            }
+            });
+        </script>
+
+        <script type="text/javascript">
+        //test to fix the carousel when you get all the way to the right
+            // $( document ).ready(function() {
+            //     console.log( "ready!" );
+
+            // window.onscroll = function() {myFunction2()};
+
+            // var carousel = document.getElementById("myCarousel");
+            // var sticky = carousel.offsetRight;
+
+            // function myFunction2() {
+            //   if (window.pageXOffset > sticky) {
+            //         $('.slider').addClass('fixed');
+            //     }
+            //     else {
+            //         $('.slider').removeClass('fixed');
+            //     }
+            // }
+            // });
+        </script>
+
+        <script type="text/javascript">
+        //initial test to add sticky header nav
+        //     $(window).scroll(function(){
+        //         if ($(window).scrollTop() >= 600) {
+        //             $('nav').addClass('fixed-header');
+        //         }
+        //         else {
+        //             $('nav').removeClass('fixed-header');
+        //         }
+        //     });
+        // </script>
+
+        <script type="text/javascript">
+
+                var randomColourOne;
+                var randomColourTwo;
+                var randomColourThree;
+                var randomColourFour;
+                var randomColourFive;
+                var randomColourSix;
+                var randomColourSeven;
+                var randomColourEight;
+                var randomColourNine;
+
+                function firstColour(){
+                    // if (window.pageYOffset > sticky) {
+                    randomColourOne = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+                    
+                    randomColourTwo = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+                
+                    randomColourThree = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+
+                    randomColourFour = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+                    
+                    randomColourFive = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+                
+                    randomColourSix = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+
+                    randomColourSeven = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+                    
+                    randomColourEight = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+                
+                    randomColourNine = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+                    
+                    var background = document.getElementById("background");
+                    background.style.backgroundImage = "-webkit-linear-gradient("+ randomColourOne +" , "+ randomColourTwo +" ,  "+ randomColourThree +" , "+ randomColourFour +" , "+ randomColourFive +" , "+ randomColourSix +" , "+ randomColourSeven +" , "+ randomColourEight +" , "+ randomColourNine +")";
+
+                    // $("#background").hover(function(firstColour) { 
+                    //     alert(firstColour.target.id);  
+                    // });
+
+            }
+        </script>
+
 	</head>
+
 	<body>
-
-		<div class="logo">
-			<a href="https://www.instagram.com/piboch/?hl=en" target="_blank">
-				<img src="img/piera-01.svg">
-			</a>
-		</div>
-
-		<div class="menu-items">
-			<div class="table">
-				<ul id="horizontal-list">
-					<li>Archive</li>
-					<li>About</li>
-					<li>Contact</li>
-				</ul>
+        
+		<nav id="myHeader">
+			<div class="logo">
+				<a href="https://www.instagram.com/piboch/?hl=en" target="_blank">
+					<img src="img/piera-01.svg">
+				</a>
 			</div>
-		</div>
+            <div id="menu-toggle" class="container open">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+		</nav>
 
-		<div id="video-frame">
-			<iframe id="video" src="https://player.vimeo.com/video/290171567?api=1&background=1&autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-			</iframe>
-		</div>
+        <div id="mySidenav" class="sidenav">
+            <div class="table">
+                <a href="#">Shop</a>
+                <a href="#">Archive</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
 
-		<div class="pop-up">
-			<h1>PIERABOCHNER.COM COMING SOON!</h1>
-			<h2>For now, please visit <a href="https://www.instagram.com/piboch/?hl=en"target="_blank">@piboch</a> to browse and DM to order :)</h2>
-		</div>
+        <div class="intro" id="myIntro">
+            <div id="video-frame">
+                <iframe id="video" src="https://player.vimeo.com/video/290171567?api=1&background=1&autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                </iframe>
+            </div>
+        </div>
 
-		<script src="https://player.vimeo.com/api/player.js"></script>
+        <div class="slider" id="myCarousel">
+            <div class="gap">
+            </div>
 
-		<style>
-			a {
-    		text-decoration: none;
-    		color: blue;
-			}
+            <div class="slide">
+                <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
+                    <p>Candle Title #3</p>
+                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
+                    <iframe id="video-1" src="https://player.vimeo.com/video/353941600?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    </iframe>
+                </a>
+            </div>
 
-		    .logo { width: 150px; position: fixed; bottom: 20px; left: 20px; line-height: 24px;} 
-
-		    .menu-items { height: 67px; position: fixed; font-size: 14px; font-family: "Akkurat"; color: white; text-transform: uppercase; /*text-decoration: line-through;*/ right: 0; bottom: 0; margin-right: 20px; opacity: .5;}
-		    .table { display: table; margin: 0 auto;}
-		    ul#horizontal-list {min-width: 100px; list-style: none;}
-		    ul#horizontal-list li { display: inline; padding-left: 25px;}
-
-		    #video { position:absolute; top:32%; left:-15%; width:75%; height:75%; }
-		    #video-frame { padding:100% 100% 0 0; position:fixed; width:100%; height:100%; left: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -1; background-color: black;}
-
-		    .pop-up {width:300px; height:150px; /*background-color: white;*/ display: table; margin: 0 auto; margin-top:15%; text-align: center; font-size: 1.5em; font-family: "Akkurat"; color: black; li: none;}
-		</style>
-
-	</body>
-</html>
+            <div class="slide">
+                <a href="https://www.pierabochner.com/product/16" target="_blank">
+                    <p>Candle Title #2</p>
+                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
+                    <iframe id="video-2" src="https://player.vimeo.com/video/353941619?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+                    </iframe>
+                </a>
+            </div>
+                
+            <div class="slide">
+                <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
+                    <p>Candle Title #1</p>
+                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
+                    <iframe id="video-1" src="https://player.vimeo.com/video/353941609?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    </iframe>
+                </a>
+            </div>
+            
+                
+            <div class="slide">
+                <a href="https://www.pierabochner.com/product/16" target="_blank">
+                    <p>Candle Title #4</p>
+                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
+                    <iframe id="video-2" src="https://player.vimeo.com/video/353941592?autoplay=1&loop=1&autopause=0&background=1" width="640" height="1278" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+                    </iframe>
+                </a>
+            </div>
+            
+            <div class="slide">
+                <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
+                    <p>Candle Title #5</p>
+                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
+                    <iframe id="video-1" src="https://player.vimeo.com/video/353942237?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    </iframe>
+                </a>
+            </div>
+                
+        </div>
+	</body>	
+    </html>
