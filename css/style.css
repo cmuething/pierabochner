@@ -217,6 +217,13 @@ a:link {
     overflow: hidden;
 }  
 
+/*#background {
+    background-color: red;
+}*/
+
+/*visible {
+    opacity: 1;
+}*/
 
 @keyframes gradient {
     0% {background-position: 0% 10%;}

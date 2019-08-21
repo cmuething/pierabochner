@@ -114,7 +114,7 @@
         // </script>
 
         <script type="text/javascript">
-
+        //if I can use this to run the function for all no-gradient, then I won't need the css and it will work http://jsfiddle.net/pmGRq/3/
                 var randomColourOne;
                 var randomColourTwo;
                 var randomColourThree;
@@ -145,14 +145,21 @@
                 
                     randomColourNine = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
                     
-                    var background = document.getElementById("background");
+                    var fullgradient = document.getElementsByClassName('no-gradient');
+
+                    var background = document.getElementById("background").addEventListener('mouseover', function(){
+
+                    });
                     background.style.backgroundImage = "-webkit-linear-gradient("+ randomColourOne +" , "+ randomColourTwo +" ,  "+ randomColourThree +" , "+ randomColourFour +" , "+ randomColourFive +" , "+ randomColourSix +" , "+ randomColourSeven +" , "+ randomColourEight +" , "+ randomColourNine +")";
+
+                    console.log(background);
 
                     // $("#background").hover(function(firstColour) { 
                     //     alert(firstColour.target.id);  
                     // });
-
+                    
             }
+            
         </script>
 
 	</head>
@@ -188,14 +195,14 @@
             </div>
         </div>
 
-        <div class="slider" id="myCarousel">
+        <div onmouseover="firstColour()" class="slider" id="myCarousel">
             <div class="gap">
             </div>
 
             <div class="slide">
                 <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
                     <p>Candle Title #3</p>
-                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
+                    <div class="no-gradient" id="background"></div>
                     <iframe id="video-1" src="https://player.vimeo.com/video/353941600?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
                 </a>
@@ -204,7 +211,7 @@
             <div class="slide">
                 <a href="https://www.pierabochner.com/product/16" target="_blank">
                     <p>Candle Title #2</p>
-                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
+                    <div class="no-gradient" id="background"></div>
                     <iframe id="video-2" src="https://player.vimeo.com/video/353941619?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                     </iframe>
                 </a>
@@ -213,7 +220,7 @@
             <div class="slide">
                 <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
                     <p>Candle Title #1</p>
-                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
+                    <div class="no-gradient" id="background"></div>
                     <iframe id="video-1" src="https://player.vimeo.com/video/353941609?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
                 </a>
@@ -223,7 +230,7 @@
             <div class="slide">
                 <a href="https://www.pierabochner.com/product/16" target="_blank">
                     <p>Candle Title #4</p>
-                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
+                    <div class="no-gradient" id="background"></div>
                     <iframe id="video-2" src="https://player.vimeo.com/video/353941592?autoplay=1&loop=1&autopause=0&background=1" width="640" height="1278" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                     </iframe>
                 </a>
@@ -232,7 +239,7 @@
             <div class="slide">
                 <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
                     <p>Candle Title #5</p>
-                    <div onmouseover="firstColour()" class="no-gradient" id="background"></div>
+                    <div class="no-gradient" id="background"></div>
                     <iframe id="video-1" src="https://player.vimeo.com/video/353942237?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                     </iframe>
                 </a>
