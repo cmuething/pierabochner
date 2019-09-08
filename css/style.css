@@ -259,15 +259,61 @@ h1 {
     text-align: center;
     color: white;
     font-size: 48px;
+    line-height: 1px;
     font-family: monospace;
     text-transform: uppercase;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 48px;
+    line-height: 1px;
+    font-family: monospace;
 }
 
 .title {
     position: fixed;
     left: 50%;
-    top: 35px;
+    top: 65px;
     transform: translate(-50%, -50%);
+}
+
+#candle-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+    bottom: 0;
+}
+
+#candle-view img {
+    max-width: 600px;
+}
+
+#candle-info {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    margin-right: 100px;
+    padding-top: 300px;
+}
+
+#candle-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.add-to-cart {
+    width: 150px;
+    height: 30px;
+    background-color: white;
+}
+
+.add-to-cart p {
+    color: black;
 }
 
 .close {

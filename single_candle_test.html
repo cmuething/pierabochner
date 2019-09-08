@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Single Candle Test</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>
+        <script type="text/javascript">
+        //wait until everything is loaded, including jquery
+        	$( document ).ready(function() {
+			    console.log( "ready!" );
+		//open and close the hamburger menu
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#mySidenav").toggleClass("toggled");
+                    var icon = $(this).parent().find(".container")
+                    if (icon.hasClass('open'))
+                        icon.removeClass('open').addClass('change');
+                    else
+                        icon.removeClass('change').addClass('open');
+            });
+			});
+        </script>
+
+        <script type="text/javascript">
+        //changing the background color, not working yet
+        	$( document ).ready(function() {
+			    console.log( "ready!" );
+			    $("#background-color-toggle").click(function(e) {
+                e.preventDefault();
+                    var icon = $(this).find("body")
+                    if (icon.hasClass('black'))
+                        icon.removeClass('black').addClass('white');
+                    else
+                        icon.removeClass('white').addClass('black');
+            });
+			});
+        </script>
+
+	</head>
+
+	<body>
+
+		<nav id="myHeader" class="fixed-header">
+			<div class="logo">
+				<a href="https://www.instagram.com/piboch/?hl=en" target="_blank">
+					<img src="img/piera-01.svg">
+				</a>
+			</div>
+
+			<div id="menu-toggle" class="container open">
+		        <div class="bar1"></div>
+		        <div class="bar2"></div>
+		        <div class="bar3"></div>
+        	</div>
+
+			<div id="mySidenav" class="sidenav">
+				<div class="table">
+					<a href="#">Shop</a>
+					<a href="#">Archive</a>
+					<a href="#">About</a>
+					<a href="#">Contact</a>
+				</div>
+			</div>
+		</nav>
+
+		<div id="candle-type" class="title">
+			<h1>Species Name</h1>
+			<h2>Candle Name</h2>
+		</div>
+
+		<div class="close">
+			<a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test.html#">Close</a>
+		</div>
+
+		<div id="background-color-toggle" class="background-color">
+			<a href="">?</a>
+		</div>
+
+		<div id="candle-menu" class="small-candle-rotate">
+		        	<a href="https://www.pierabochner.com/product/16" target="_blank">
+<!--                         <p>Candle Title #4</p>
+ -->                        <div></div>
+                        <iframe src="https://player.vimeo.com/video/331697594?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+                        </iframe>
+                    </a>
+					<a href="https://www.pierabochner.com/product/16" target="_blank">
+<!-- 		                <p>Candle Title #6</p>
+ -->		                <div></div>
+		                <iframe src="https://player.vimeo.com/video/341705655?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+		                </iframe>
+		            </a>
+		        	<a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
+<!--                         <p>Candle Title #5</p>
+ -->                        <div></div>
+                        <iframe src="https://player.vimeo.com/video/331697585?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        </iframe>
+                    </a>
+		</div>
+
+		<div>
+			<div id="candle-view">
+				<img src="img/candle_01.png">
+			</div>
+			<div id="candle-info">
+				<ul>
+					<li>
+						Candle Name
+					</li>
+					<li>
+						2018
+					</li>
+					<li>
+						4 x 5 x 4 Inches
+					</li>
+					<li>
+						Wax
+					</li>
+					<li>
+						Handmade in New York
+					</li>
+					<li>
+						$45
+					</li>
+				</ul>
+				
+				<div class="add-to-cart" id="cart-button">
+					<p>Add to Cart</p>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- <div class="row">
+			<div class="column">
+				<img src="img/candle_01.png">
+				<img src="img/candle_01.png">
+				<img src="img/candle_01.png">
+			</div>
+			<div class="column">
+				<img src="img/candle_01.png">
+				<img src="img/candle_01.png">
+				<img src="img/candle_01.png">
+			</div>
+			<div class="column">
+				<img src="img/candle_01.png">
+				<img src="img/candle_01.png">
+				<img src="img/candle_01.png">
+			</div>
+		</div> -->	
+
+	</body>
+</html>
