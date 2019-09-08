@@ -145,19 +145,16 @@
                 
                     randomColourNine = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
                     
-                    var fullgradient = document.getElementsByClassName('no-gradient');
+                    var background = document.getElementById('background');
 
-                    var background = document.getElementById("background").addEventListener('mouseover', function(){
+                    var background = document.querySelectorAll('#background1, #background2, #background3, #background4, #background5');
 
-                    });
-                    background.style.backgroundImage = "-webkit-linear-gradient("+ randomColourOne +" , "+ randomColourTwo +" ,  "+ randomColourThree +" , "+ randomColourFour +" , "+ randomColourFive +" , "+ randomColourSix +" , "+ randomColourSeven +" , "+ randomColourEight +" , "+ randomColourNine +")";
+                    for (var i = 0; i < background.length; i++)
+                    {
 
-                    console.log(background);
-
-                    // $("#background").hover(function(firstColour) { 
-                    //     alert(firstColour.target.id);  
-                    // });
+                    background[i].style.backgroundImage = "-webkit-linear-gradient("+ randomColourOne +" , "+ randomColourTwo +" ,  "+ randomColourThree +" , "+ randomColourFour +" , "+ randomColourFive +" , "+ randomColourSix +" , "+ randomColourSeven +" , "+ randomColourEight +" , "+ randomColourNine +")";
                     
+                    }
             }
             
         </script>
@@ -196,54 +193,55 @@
         </div>
 
         <div onmouseover="firstColour()" class="slider" id="myCarousel">
+
             <div class="gap">
             </div>
 
-            <div class="slide">
-                <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
-                    <p>Candle Title #3</p>
-                    <div class="no-gradient" id="background"></div>
-                    <iframe id="video-1" src="https://player.vimeo.com/video/353941600?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                    </iframe>
-                </a>
-            </div>
+                <div class="slide">
+                    <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
+                        <p>Candle Title #3</p>
+                        <div class="no-gradient" id="background1"></div>
+                        <iframe id="video-1" src="https://player.vimeo.com/video/353941600?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        </iframe>
+                    </a>
+                </div>
 
-            <div class="slide">
-                <a href="https://www.pierabochner.com/product/16" target="_blank">
-                    <p>Candle Title #2</p>
-                    <div class="no-gradient" id="background"></div>
-                    <iframe id="video-2" src="https://player.vimeo.com/video/353941619?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-                    </iframe>
-                </a>
-            </div>
+                <div class="slide">
+                    <a href="https://www.pierabochner.com/product/16" target="_blank">
+                        <p>Candle Title #2</p>
+                        <div class="no-gradient" id="background2"></div>
+                        <iframe id="video-2" src="https://player.vimeo.com/video/353941619?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+                        </iframe>
+                    </a>
+                </div>
+                    
+                <div class="slide">
+                    <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
+                        <p>Candle Title #1</p>
+                        <div class="no-gradient" id="background3"></div>
+                        <iframe id="video-1" src="https://player.vimeo.com/video/353941609?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        </iframe>
+                    </a>
+                </div>
                 
-            <div class="slide">
-                <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
-                    <p>Candle Title #1</p>
-                    <div class="no-gradient" id="background"></div>
-                    <iframe id="video-1" src="https://player.vimeo.com/video/353941609?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                    </iframe>
-                </a>
-            </div>
-            
+                    
+                <div class="slide">
+                    <a href="https://www.pierabochner.com/product/16" target="_blank">
+                        <p>Candle Title #4</p>
+                        <div class="no-gradient" id="background4"></div>
+                        <iframe id="video-2" src="https://player.vimeo.com/video/353941592?autoplay=1&loop=1&autopause=0&background=1" width="640" height="1278" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+                        </iframe>
+                    </a>
+                </div>
                 
-            <div class="slide">
-                <a href="https://www.pierabochner.com/product/16" target="_blank">
-                    <p>Candle Title #4</p>
-                    <div class="no-gradient" id="background"></div>
-                    <iframe id="video-2" src="https://player.vimeo.com/video/353941592?autoplay=1&loop=1&autopause=0&background=1" width="640" height="1278" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-                    </iframe>
-                </a>
-            </div>
-            
-            <div class="slide">
-                <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
-                    <p>Candle Title #5</p>
-                    <div class="no-gradient" id="background"></div>
-                    <iframe id="video-1" src="https://player.vimeo.com/video/353942237?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                    </iframe>
-                </a>
-            </div>
+                <div class="slide">
+                    <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
+                        <p>Candle Title #5</p>
+                        <div class="no-gradient" id="background5"></div>
+                        <iframe id="video-1" src="https://player.vimeo.com/video/353942237?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        </iframe>
+                    </a>
+                </div>
                 
         </div>
 	</body>	
