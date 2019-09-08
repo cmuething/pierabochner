@@ -147,7 +147,6 @@ a:link {
 .slider {
     position: relative;
     background-color: #000;
-    left: 0;
     width: 100%;
     padding-left: 50px;
     white-space: nowrap;
@@ -157,8 +156,13 @@ a:link {
 .gap {
     position: relative;
     display: inline-block;
+    margin-left: -50px;
     height: 100%;
     width: 30%;
+}
+
+.trigger {
+    margin-left: 0px !important;
 }
 
 .fixed-video {
