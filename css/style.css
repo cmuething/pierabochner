@@ -371,6 +371,26 @@ h2 {
     vertical-align: middle;
 }
 
+.tagged-images {
+    padding-top: 30px;
+}
+
+#first-row {
+    max-width: 250px;
+}
+
+#first-row img {
+    margin-bottom: 0px !important;
+}
+
+#second-row {
+    max-width: 250px;
+}
+
+#second-row {
+    margin-bottom: 0px !important;
+}
+
 .small-candle-rotate {
 /*              width: 100px;
 */              height: 100%;
@@ -381,6 +401,7 @@ h2 {
 
 .small-candle-rotate iframe {
     width: 100px;
+    height: 100px;
 }
 
 /* from landing_page */

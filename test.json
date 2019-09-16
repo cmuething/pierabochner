@@ -1,0 +1,62 @@
+{
+
+   "candles": [
+
+   {
+      "bitter_melon": [
+   	
+         {
+            "id":"#01",
+            "date": "October 2019",
+            "size": "7.5 in x 2.25 in",
+            "material": "wax, cotten wick",
+            "price": "$50.00",
+            "scan": "https://player.vimeo.com/video/353941609?autoplay=1&loop=1&autopause=0&background=1",
+            "images": [
+
+               {
+                  "1": "",
+                  "2": "",
+                  "3": ""
+               }
+            ]
+         },
+   	
+         {
+            "id":"#02",
+            "date": "October 2019",
+            "size": "7.5 in x 2.25 in",
+            "material": "wax, cotten wick",
+            "price": "$50.00",
+            "scan": "https://player.vimeo.com/video/353941609?autoplay=1&loop=1&autopause=0&background=1",
+            "images": [
+
+               {
+                  "1": "",
+                  "2": "",
+                  "3": ""
+               }
+            ]
+         }
+      ]
+
+   },
+
+   {
+      "bumpy_gourd": []
+   },
+
+   {
+      "kiwano": []
+   },
+
+   {
+      "romanesco": []
+   },
+
+   {
+      "sugar_apple": []
+   }
+
+   ]
+}

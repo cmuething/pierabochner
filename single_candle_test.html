@@ -7,6 +7,11 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    	<!-- this loads mustache.js, required for the templating to happen -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+
         <script src="js/jquery.mousewheel.js"></script>
         <script type="text/javascript">
         //wait until everything is loaded, including jquery
@@ -56,6 +61,7 @@
 		        <div class="bar2"></div>
 		        <div class="bar3"></div>
         	</div>
+		</nav>
 
 			<div id="mySidenav" class="sidenav">
 				<div class="table">
@@ -65,7 +71,6 @@
 					<a href="#">Contact</a>
 				</div>
 			</div>
-		</nav>
 
 		<div id="candle-type" class="title">
 			<h1>Species Name</h1>
@@ -84,22 +89,70 @@
 		        	<a href="https://www.pierabochner.com/product/16" target="_blank">
 <!--                         <p>Candle Title #4</p>
  -->                        <div></div>
-                        <iframe src="https://player.vimeo.com/video/331697594?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+                        <iframe src="https://player.vimeo.com/video/353941609?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
                         </iframe>
                     </a>
 					<a href="https://www.pierabochner.com/product/16" target="_blank">
 <!-- 		                <p>Candle Title #6</p>
  -->		                <div></div>
-		                <iframe src="https://player.vimeo.com/video/341705655?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+		                <iframe src="https://player.vimeo.com/video/353941619?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
 		                </iframe>
 		            </a>
 		        	<a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
 <!--                         <p>Candle Title #5</p>
  -->                        <div></div>
-                        <iframe src="https://player.vimeo.com/video/331697585?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        <iframe src="https://player.vimeo.com/video/353941600?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        </iframe>
+                    </a>
+                    <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
+<!--                         <p>Candle Title #5</p>
+ -->                        <div></div>
+                        <iframe src="https://player.vimeo.com/video/353941592?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        </iframe>
+                    </a>
+                    <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
+<!--                         <p>Candle Title #5</p>
+ -->                        <div></div>
+                        <iframe src="https://player.vimeo.com/video/353942237?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                         </iframe>
                     </a>
 		</div>
+
+		<script type="text/x-mustache-template">
+			{{#candles}}
+				<div class="one-candle">
+					<div id="candle-view">
+						<img src="{{images.1}}">
+					</div>
+					<div id="candle-info">
+						<ul>
+							<li>
+								{{name}}
+							</li>
+							<li>
+								{{date}}
+							</li>
+							<li>
+								{{size}}
+							</li>
+							<li>
+								{{material}}
+							</li>
+							<li>
+								Handmade in New York
+							</li>
+							<li>
+								{{price}}
+							</li>
+						</ul>
+
+						<div class="add-to-cart" id="cart-button">
+							<p>Add to Cart</p>
+						</div>
+					</div>
+				</div>
+			{{/candles}}
+		</script>
 
 		<div class="one-candle">
 			<div id="candle-view">
@@ -129,6 +182,19 @@
 
 				<div class="add-to-cart" id="cart-button">
 					<p>Add to Cart</p>
+				</div>
+
+				<div class="tagged-images">
+					<div class="column" id="first-row">
+						<img src="img/image_1.png">
+						<img src="img/image_1.png">
+						<img src="img/image_1.png">
+					</div>
+
+					<div class="column" id="second-row">
+						<img src="img/image_1.png">
+						<img src="img/image_1.png">
+					</div>
 				</div>
 			</div>
 		</div>
