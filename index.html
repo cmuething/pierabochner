@@ -15,7 +15,7 @@
         //open and close the hamburger menu
             $("#menu-toggle").click(function(e) {
                 e.preventDefault();
-                $("#mySidenav").toggleClass("toggled");
+                $("#sidenav").toggleClass("toggled");
                     var icon = $(this).parent().find(".container")
                     if (icon.hasClass('open'))
                         icon.removeClass('open').addClass('change');
@@ -58,7 +58,7 @@
 
             window.onscroll = function() {myFunction()};
 
-            var header = document.getElementById("myHeader");
+            var header = document.getElementById("header");
             var sticky = header.offsetTop;
             var leftEdge = document.getElementById("trigger1")
             var redirect = leftEdge.offsetLeft;
@@ -66,7 +66,7 @@
             function myFunction() {
               if (window.pageYOffset > sticky) {
                     $('nav').addClass('fixed-header');
-                    $('#myIntro').addClass('fixed-video');
+                    $('#intro-video').addClass('fixed-video');
                     $("html, body").mousewheel(function(event, delta) {
 
                     this.scrollLeft -= (delta * .5);
@@ -78,7 +78,7 @@
                 }
             
                 // if (window.pageXOffset == redirect) {
-                //         $('#myIntro').removeClass('fixed-video');
+                //         $('#intro-video').removeClass('fixed-video');
                 //         $("html, body").mousewheel(function(event, delta) {
 
                 //         return true;
@@ -87,7 +87,7 @@
                 //     }
 
                 // else {
-                //     $('#myIntro').addClass('fixed-video');
+                //     $('#intro-video').addClass('fixed-video');
                 // }
             });
         </script>
@@ -99,7 +99,7 @@
 
             // window.onscroll = function() {myFunction2()};
 
-            // var carousel = document.getElementById("myCarousel");
+            // var carousel = document.getElementById("full-carousel");
             // var sticky = carousel.offsetRight;
 
             // function myFunction2() {
@@ -173,20 +173,20 @@
 
 	<body>
         
-		<nav id="myHeader">
+		<nav id="header">
 			<div class="logo">
 				<a href="https://www.instagram.com/piboch/?hl=en" target="_blank">
 					<img src="img/piera-01.svg">
 				</a>
 			</div>
-            <div id="menu-toggle" class="container open">
+            <div class="container open" id="menu-toggle" >
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
 		</nav>
 
-        <div id="mySidenav" class="sidenav">
+        <div class="sidenav" id="sidenav-toggle" >
             <div class="table">
                 <a href="#">Shop</a>
                 <a href="#">Archive</a>
@@ -195,14 +195,14 @@
             </div>
         </div>
 
-        <div class="intro" id="myIntro">
+        <div class="intro" id="intro-video">
             <div id="video-frame">
                 <iframe id="video" src="https://player.vimeo.com/video/290171567?api=1&background=1&autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                 </iframe>
             </div>
         </div>
 
-        <div onmouseover="firstColour()" class="slider" id="myCarousel">
+        <div onmouseover="firstColour()" class="slider" id="full-carousel">
 
             <div class="gap" id="trigger1">
             </div>

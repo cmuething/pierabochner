@@ -15,7 +15,7 @@
 		//open and close the hamburger menu
             $("#menu-toggle").click(function(e) {
                 e.preventDefault();
-                $("#mySidenav").toggleClass("toggled");
+                $("#sidenav-toggle").toggleClass("toggled");
                     var icon = $(this).parent().find(".container")
                     if (icon.hasClass('open'))
                         icon.removeClass('open').addClass('change');
@@ -31,34 +31,33 @@
 			    console.log( "ready!" );
 			    $("#background-color-toggle").click(function(e) {
                 e.preventDefault();
-                    var icon = $(this).find("body")
-                    if (icon.hasClass('black'))
-                        icon.removeClass('black').addClass('white');
+                    if ($("body").hasClass('black'))
+                        $("body").removeClass('black').addClass('white');
                     else
-                        icon.removeClass('white').addClass('black');
+                        $("body").removeClass('white').addClass('black');
             });
 			});
         </script>
 
 	</head>
 
-	<body>
+	<body class="black">
 
-		<nav id="myHeader" class="fixed-header">
+		<nav class="fixed-header" id="header">
 			<div class="logo">
 				<a href="https://www.instagram.com/piboch/?hl=en" target="_blank">
 					<img src="img/piera-01.svg">
 				</a>
 			</div>
 
-			<div id="menu-toggle" class="container open">
+			<div class="container open" id="menu-toggle" >
 		        <div class="bar1"></div>
 		        <div class="bar2"></div>
 		        <div class="bar3"></div>
         	</div>
 		</nav>
 
-			<div id="mySidenav" class="sidenav">
+			<div class="sidenav" id="sidenav-toggle">
 				<div class="table">
 					<a href="#">Shop</a>
 					<a href="#">Archive</a>
@@ -67,7 +66,7 @@
 				</div>
 			</div>
 
-		<div id="candle-type" class="title">
+		<div class="title" id="candle-type" >
 			<h1>Species Name<h1>
 		</div>
 
@@ -75,11 +74,11 @@
 			<a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test.html#">Close</a>
 		</div>
 
-		<div id="background-color-toggle" class="background-color">
+		<div class="background-color" id="background-color-toggle" >
 			<a href="">?</a>
 		</div>
 
-		<div id="candle-menu" class="small-candle-rotate">
+		<div class="side-carousel" id="candle-menu" >
 		        	<a href="https://www.pierabochner.com/product/16" target="_blank">
 <!--                         <p>Candle Title #4</p>
  -->                        <div></div>
@@ -113,27 +112,54 @@
 		</div>
 
 		<div class="row">
-			<div class="column">
-				<a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/single_candle_test.html" target="_blank">
-					<img src="img/candle_01.png">
-				</a>
-				<a>
-					<img src="img/candle_01.png">
-				</a>
-				<a>
-					<img src="img/candle_01.png">
-				</a>
+			<div class="column" id="candle-grid">
+				<div class="candle-grid-item">
+					<a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/single_candle_test.html" target="_blank">
+						<img src="img/candle_01.png">
+						<h3> Candle Name </h3>
+					</a>
+				</div>
+				<div class="candle-grid-item">
+					<a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/single_candle_test.html" target="_blank">
+						<img src="img/candle_01.png">
+						<h3> Candle Name </h3>
+					</a>
+				</div>
+				<div class="candle-grid-item">
+					<a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/single_candle_test.html" target="_blank">
+						<img src="img/candle_01.png">
+						<h3> Candle Name </h3>
+					</a>
+				</div>
+				<div class="candle-grid-item">
+					<a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/single_candle_test.html" target="_blank">
+						<img src="img/candle_01.png">
+						<h3> Candle Name </h3>
+					</a>
+				</div>
+				<div class="candle-grid-item">
+					<a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/single_candle_test.html" target="_blank">
+						<img src="img/candle_01.png">
+						<h3> Candle Name </h3>
+					</a>
+				</div>
+				<div class="candle-grid-item">
+					<a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/single_candle_test.html" target="_blank">
+						<img src="img/candle_01.png">
+						<h3> Candle Name </h3>
+					</a>
+				</div>
+			</div>
+			<!-- <div class="column">
+				<img src="img/candle_01.png">
+				<img src="img/candle_01.png">
+				<img src="img/candle_01.png">
 			</div>
 			<div class="column">
 				<img src="img/candle_01.png">
 				<img src="img/candle_01.png">
 				<img src="img/candle_01.png">
-			</div>
-			<div class="column">
-				<img src="img/candle_01.png">
-				<img src="img/candle_01.png">
-				<img src="img/candle_01.png">
-			</div>
+			</div> -->
 		</div>	
 
 	</body>

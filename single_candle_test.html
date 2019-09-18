@@ -20,7 +20,7 @@
 		//open and close the hamburger menu
             $("#menu-toggle").click(function(e) {
                 e.preventDefault();
-                $("#mySidenav").toggleClass("toggled");
+                $("#sidenav-toggle").toggleClass("toggled");
                     var icon = $(this).parent().find(".container")
                     if (icon.hasClass('open'))
                         icon.removeClass('open').addClass('change');
@@ -36,34 +36,34 @@
 			    console.log( "ready!" );
 			    $("#background-color-toggle").click(function(e) {
                 e.preventDefault();
-                    var icon = $(this).find("body")
-                    if (icon.hasClass('black'))
-                        icon.removeClass('black').addClass('white');
+                    // var icon = $(this).find("html")
+                    if ($("body").hasClass('black'))
+                        $("body").removeClass('black').addClass('white');
                     else
-                        icon.removeClass('white').addClass('black');
+                        $("body").removeClass('white').addClass('black');
             });
 			});
         </script>
 
 	</head>
 
-	<body>
+	<body class="black">
 
-		<nav id="myHeader" class="fixed-header">
+		<nav class="fixed-header" id="header">
 			<div class="logo">
 				<a href="https://www.instagram.com/piboch/?hl=en" target="_blank">
 					<img src="img/piera-01.svg">
 				</a>
 			</div>
 
-			<div id="menu-toggle" class="container open">
+			<div class="container open" id="menu-toggle">
 		        <div class="bar1"></div>
 		        <div class="bar2"></div>
 		        <div class="bar3"></div>
         	</div>
 		</nav>
 
-			<div id="mySidenav" class="sidenav">
+			<div class="sidenav" id="sidenav-toggle">
 				<div class="table">
 					<a href="#">Shop</a>
 					<a href="#">Archive</a>
@@ -72,7 +72,7 @@
 				</div>
 			</div>
 
-		<div id="candle-type" class="title">
+		<div class="title" id="candle-type">
 			<h1>Species Name</h1>
 			<h2>Candle Name</h2>
 		</div>
@@ -85,7 +85,7 @@
 			<a href="">?</a>
 		</div>
 
-		<div id="candle-menu" class="small-candle-rotate">
+		<div class="side-carousel" id="candle-menu">
 		        	<a href="https://www.pierabochner.com/product/16" target="_blank">
 <!--                         <p>Candle Title #4</p>
  -->                        <div></div>
@@ -119,46 +119,46 @@
 		</div>
 
 		<script type="text/x-mustache-template">
-			{{#candles}}
-				<div class="one-candle">
-					<div id="candle-view">
-						<img src="{{images.1}}">
-					</div>
-					<div id="candle-info">
-						<ul>
-							<li>
-								{{name}}
-							</li>
-							<li>
-								{{date}}
-							</li>
-							<li>
-								{{size}}
-							</li>
-							<li>
-								{{material}}
-							</li>
-							<li>
-								Handmade in New York
-							</li>
-							<li>
-								{{price}}
-							</li>
-						</ul>
+		// 	{{#candles}}
+		// 		<div class="one-candle">
+		// 			<div class="candle-view">
+		// 				<img src="{{images.1}}">
+		// 			</div>
+		// 			<div class="candle-info">
+		// 				<ul>
+		// 					<li>
+		// 						{{name}}
+		// 					</li>
+		// 					<li>
+		// 						{{date}}
+		// 					</li>
+		// 					<li>
+		// 						{{size}}
+		// 					</li>
+		// 					<li>
+		// 						{{material}}
+		// 					</li>
+		// 					<li>
+		// 						Handmade in New York
+		// 					</li>
+		// 					<li>
+		// 						{{price}}
+		// 					</li>
+		// 				</ul>
 
-						<div class="add-to-cart" id="cart-button">
-							<p>Add to Cart</p>
-						</div>
-					</div>
-				</div>
-			{{/candles}}
-		</script>
+		// 				<div class="add-to-cart" id="cart-button">
+		// 					<p>Add to Cart</p>
+		// 				</div>
+		// 			</div>
+		// 		</div>
+		// 	{{/candles}}
+		// </script>
 
 		<div class="one-candle">
-			<div id="candle-view">
+			<div class="candle-view">
 				<img src="img/candle_01.png">
 			</div>
-			<div id="candle-info">
+			<div class="candle-info">
 				<ul>
 					<li>
 						Candle Name
@@ -180,21 +180,22 @@
 					</li>
 				</ul>
 
-				<div class="add-to-cart" id="cart-button">
+				<div class="button" id="add-to-cart">
 					<p>Add to Cart</p>
 				</div>
 
 				<div class="tagged-images">
-					<div class="column" id="first-row">
+					<div class="column" id="candle-image-grid">
+						<img src="img/image_1.png">
+						<img src="img/image_1.png">
 						<img src="img/image_1.png">
 						<img src="img/image_1.png">
 						<img src="img/image_1.png">
 					</div>
 
-					<div class="column" id="second-row">
-						<img src="img/image_1.png">
-						<img src="img/image_1.png">
-					</div>
+					<!-- <div class="column" id="second-row">
+						
+					</div> -->
 				</div>
 			</div>
 		</div>
