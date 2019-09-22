@@ -51,6 +51,11 @@ nav {
 /*                background-color: black;*/
 }
 
+.navigation {
+    width: 100%;
+    height: 55px;
+}
+
 .background-color {
     color: #000;
     text-align: center;
@@ -65,8 +70,8 @@ nav {
 }
 
 .black {
-    background-color: #000;
-/*    filter: invert(0%);
+/*    background-color: #000;
+*//*    filter: invert(0%);
 */}
 
 .white {
@@ -354,13 +359,16 @@ h3 {
 }
 
 .button {
+    background-color: white;
     width: 150px;
     height: 30px;
-    background-color: white;
+    padding-top: 15px;
+    text-align: center;
 }
 
 .button p {
     color: black;
+    margin: 0px;
 }
 
 .close {

@@ -15,7 +15,7 @@
         //open and close the hamburger menu
             $("#menu-toggle").click(function(e) {
                 e.preventDefault();
-                $("#sidenav").toggleClass("toggled");
+                $("#sidenav-toggle").toggleClass("toggled");
                     var icon = $(this).parent().find(".container")
                     if (icon.hasClass('open'))
                         icon.removeClass('open').addClass('change');
@@ -60,8 +60,12 @@
 
             var header = document.getElementById("header");
             var sticky = header.offsetTop;
+
             var leftEdge = document.getElementById("trigger1")
-            var redirect = leftEdge.offsetLeft;
+            var redirect_1 = leftEdge.offsetLeft;
+
+            var rightEdge = document.getElementById("trigger2")
+            var redirect_2 = rightEdge.offsetRight;
 
             function myFunction() {
               if (window.pageYOffset > sticky) {
@@ -75,15 +79,20 @@
 
                     });
                 }
-                }
+
+              if (window.pageXOffset > redirect_2 - 50) {
+                    $("html, body").addClass('white');
+              }
+
+              // else {
+              //       $('#intro-video').removeClass('fixed-video');
+
+                    
+              // }
+            }
             
-                // if (window.pageXOffset == redirect) {
+                // if (window.pageXOffset <= redirect) {
                 //         $('#intro-video').removeClass('fixed-video');
-                //         $("html, body").mousewheel(function(event, delta) {
-
-                //         return true;
-
-                //         });
                 //     }
 
                 // else {
@@ -171,7 +180,7 @@
 
 	</head>
 
-	<body>
+	<body class="black">
         
 		<nav id="header">
 			<div class="logo">
