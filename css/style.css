@@ -274,6 +274,22 @@ a:link {
     100% {background-position: 0% 100%;}
 }
 
+.constantGradient{
+    opacity: 1;
+    /*background: linear-gradient(-180deg, #EE7752, #23A6D5, #23D5AB, #EE7752, #E73C7E, #23A6D5, #23D5AB, #EE7752, #23D5AB, #EE7752, #E73C7E, #23A6D5);*/
+    background-size: 100% 100%;
+/*   -webkit-animation: gradient 15s ease infinite;
+   -moz-animation: gradient 15s ease infinite;
+   animation: gradient 15s ease infinite;*/
+    position: absolute;
+    margin-left: 75px;
+    z-index: 5;
+    mix-blend-mode: multiply;
+    height: 100%;
+    max-width: 90%;
+    overflow: hidden;
+}
+
 #video-1 { 
     height: 100%; 
     width: 100%; 

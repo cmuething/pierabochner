@@ -173,16 +173,23 @@
 
                     background[i].style.backgroundImage = "-webkit-linear-gradient("+ randomColourOne +" , "+ randomColourTwo +" ,  "+ randomColourThree +" , "+ randomColourFour +" , "+ randomColourFive +" , "+ randomColourSix +" , "+ randomColourSeven +" , "+ randomColourEight +" , "+ randomColourNine +")";
                     
+                    localStorage.setItem("copyColor", "-webkit-linear-gradient("+ randomColourOne +" , "+ randomColourTwo +" ,  "+ randomColourThree +" , "+ randomColourFour +" , "+ randomColourFive +" , "+ randomColourSix +" , "+ randomColourSeven +" , "+ randomColourEight +" , "+ randomColourNine +")");
+
                     }
+
             }
             
+        </script>
+
+        <script type="text/javascript">
+
         </script>
 
 	</head>
 
 	<body class="black">
         
-		<nav id="header">
+		<nav class="result" id="header">
 			<div class="logo">
 				<a href="https://www.instagram.com/piboch/?hl=en" target="_blank">
 					<img src="img/piera-01.svg">
@@ -216,7 +223,7 @@
             <div class="gap" id="trigger1">
             </div>
 
-                <div class="slide">
+                <div class="slide select">
                     <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
                         <p>Candle Title #3</p>
                         <div class="no-gradient" id="background1"></div>
