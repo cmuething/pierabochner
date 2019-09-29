@@ -96,6 +96,12 @@
                 var rightEdge = document.getElementById("trigger2")
                 var redirect_2 = rightEdge.offsetRight;
 
+                var scrollEventHandler = function() {
+                  window.scroll(0, window.pageYOffset)
+                }
+
+                window.addEventListener("scroll", scrollEventHandler, true);
+
 
                 if (scroll >= 10) {
                     $(".slider").addClass("scrolled");
@@ -103,6 +109,7 @@
 
                 if (scroll >= pos.top & scroll >= $(window).height()) {
                     s.addClass("at-the-bottom");
+                    window.addEventListener("scroll", scrollEventHandler, false);
                 }
 
                 if (window.pageXOffset == redirect_1) {
@@ -111,20 +118,23 @@
 
                 else {
                     $(".slider").removeClass('at-the-left-edge');
-                    $('#intro-video').addClass('fixed-video'); 
-                    $("html, body").mousewheel(function(event, delta) {
+                    // $('#intro-video').addClass('fixed-video'); 
+                    // function scrollHorizontally() {
+                        $("html, body").mousewheel(function(event, delta) {
 
-                    this.scrollLeft -= (delta * .5);
+                        this.scrollLeft -= (delta * .5);
 
-                    event.preventDefault();
+                        event.preventDefault();
 
-                    });
+                        });
+                    // }
                 }
 
                 //try to make it conditional, that as soon as it has all three, you can scroll vertically. still need to figure out how to return to the default scrolling
 
-                // if (!$(".slider").hasClass('scrolled', 'at-the-left-edge', 'at-the-bottom')) {
+                // if ($(".slider").hasClass('at-the-left-edge') || $(".slider").hasClass('at-the-bottom')) {
                 //     $('#intro-video').removeClass('fixed-video'); 
+                //     window.addEventListener("mousewheel", scrollHorizontally, false);
                 // }
 
                 // else {
@@ -241,7 +251,7 @@
             </div>
         </div>
 
-        <div class="intro" id="intro-video">
+        <div class="intro intro-lock" id="intro-video">
             <div id="video-frame">
                 <iframe id="video" src="https://player.vimeo.com/video/290171567?api=1&background=1&autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                 </iframe>

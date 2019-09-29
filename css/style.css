@@ -184,6 +184,11 @@ a:link {
     left: 0;
 }
 
+/*.intro-lock {
+    max-width: 100%;
+    overflow-x: hidden;
+}*/
+
 .slider {
     position: relative;
     background-color: #000;
