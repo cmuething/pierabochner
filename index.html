@@ -61,28 +61,11 @@
             var header = document.getElementById("header");
             var sticky = header.offsetTop;
 
-            var leftEdge = document.getElementById("trigger1")
-            var redirect_1 = leftEdge.offsetLeft;
-
-            var rightEdge = document.getElementById("trigger2")
-            var redirect_2 = rightEdge.offsetRight;
-
             function myFunction() {
+
               if (window.pageYOffset > sticky) {
                     $('nav').addClass('fixed-header');
-                    $('#intro-video').addClass('fixed-video');
-                    $("html, body").mousewheel(function(event, delta) {
-
-                    this.scrollLeft -= (delta * .5);
-
-                    event.preventDefault();
-
-                    });
                 }
-
-              if (window.pageXOffset > redirect_2 - 50) {
-                    $("html, body").addClass('white');
-              }
 
               // else {
               //       $('#intro-video').removeClass('fixed-video');
@@ -100,6 +83,57 @@
                 // }
             });
         </script>
+
+        <script type="text/javascript">
+            $(window).scroll(function() {    
+                var scroll = $(window).scrollTop();
+                var s = $(".slider");
+                var pos = s.position();
+
+                var leftEdge = document.getElementById("trigger1")
+                var redirect_1 = leftEdge.offsetLeft;
+
+                var rightEdge = document.getElementById("trigger2")
+                var redirect_2 = rightEdge.offsetRight;
+
+
+                if (scroll >= 10) {
+                    $(".slider").addClass("scrolled");
+                }
+
+                if (scroll >= pos.top & scroll >= $(window).height()) {
+                    s.addClass("at-the-bottom");
+                }
+
+                if (window.pageXOffset == redirect_1) {
+                    $(".slider").addClass('at-the-left-edge');
+                }
+
+                else {
+                    $(".slider").removeClass('at-the-left-edge');
+                    $('#intro-video').addClass('fixed-video'); 
+                    $("html, body").mousewheel(function(event, delta) {
+
+                    this.scrollLeft -= (delta * .5);
+
+                    event.preventDefault();
+
+                    });
+                }
+
+                //try to make it conditional, that as soon as it has all three, you can scroll vertically. still need to figure out how to return to the default scrolling
+
+                // if (!$(".slider").hasClass('scrolled', 'at-the-left-edge', 'at-the-bottom')) {
+                //     $('#intro-video').removeClass('fixed-video'); 
+                // }
+
+                // else {
+                //     $('#intro-video').addClass('fixed-video'); 
+                // }
+
+            });
+        </script>
+
 
         <script type="text/javascript">
         //test to fix the carousel when you get all the way to the right
@@ -179,10 +213,6 @@
 
             }
             
-        </script>
-
-        <script type="text/javascript">
-
         </script>
 
 	</head>

@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Akkurat";
-    src: url("fonts/akkurat-bold.otf");
+    src: url("../fonts/akkurat-bold.otf");
 }
 
 @media only screen and (max-width: 1000px) {
@@ -18,7 +18,7 @@
         margin-top: 30% !important;
     }
 
-    #video {
+    /*#video {
         top: 10% !important;
         left: -15% !important;
         width: 115% !important;
@@ -27,7 +27,7 @@
 
     #video-frame {
         padding:100% 0 0 0; 
-    }
+    }*/
 
     .title {
         display: none;
@@ -35,7 +35,7 @@
 }
 
 body {
-	font-family: Monospace;
+	font-family: "Akkurat", Helvetica, sans-serif;
 	background-color: #000;
 	color: #fff;
 	margin: 0px;
@@ -67,6 +67,9 @@ nav {
     bottom: 20px;
     right: 20px;
     z-index: 11;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
 }
 
 .black {
@@ -147,7 +150,7 @@ a:link {
   height: 100%; /* 100% Full-height */
   width: 0px; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  z-index: 10; /* Stay on top */
   top: 0; /* Stay at the top */
   right: 0;
   background-color: #ffffff; /* Black*/
@@ -165,7 +168,7 @@ a:link {
     padding-left: 30px;
     color: white;
     font-size: 16px;
-    font-family: monospace;
+    font-family: "Akkurat", Helvetica, sans-serif;
     text-transform: uppercase;
 }
 
@@ -187,7 +190,7 @@ a:link {
     width: 100%;
     padding-left: 50px;
     white-space: nowrap;
-    height: 99vh;
+    height: 100vh;
 }
 
 .gap {
@@ -233,6 +236,16 @@ a:link {
     padding-left: 50px;
 }
 
+.no-gradients {
+    opacity: 1;
+    position: absolute;
+    margin-left: 25px;
+    z-index: 5;
+    mix-blend-mode: multiply;
+    height: 12.5%;
+    width: 50%;
+}
+
 .no-gradient {
     opacity: 0;
     position: absolute;
@@ -258,14 +271,6 @@ a:link {
     overflow: hidden;
 }  
 
-/*#background {
-    background-color: red;
-}*/
-
-/*visible {
-    opacity: 1;
-}*/
-
 @keyframes gradient {
     0% {background-position: 0% 10%;}
     25% {background-position: 0% 30%;}
@@ -276,18 +281,6 @@ a:link {
 
 .constantGradient{
     opacity: 1;
-    /*background: linear-gradient(-180deg, #EE7752, #23A6D5, #23D5AB, #EE7752, #E73C7E, #23A6D5, #23D5AB, #EE7752, #23D5AB, #EE7752, #E73C7E, #23A6D5);*/
-    background-size: 100% 100%;
-/*   -webkit-animation: gradient 15s ease infinite;
-   -moz-animation: gradient 15s ease infinite;
-   animation: gradient 15s ease infinite;*/
-    position: absolute;
-    margin-left: 75px;
-    z-index: 5;
-    mix-blend-mode: multiply;
-    height: 100%;
-    max-width: 90%;
-    overflow: hidden;
 }
 
 #video-1 { 
@@ -313,7 +306,7 @@ h1 {
     color: white;
     font-size: 48px;
     line-height: 1px;
-    font-family: monospace;
+    font-family: "Akkurat", Helvetica, sans-serif;
     text-transform: uppercase;
 }
 
@@ -322,7 +315,7 @@ h2 {
     color: white;
     font-size: 48px;
     line-height: 1px;
-    font-family: monospace;
+    font-family: "Akkurat", Helvetica, sans-serif;
 }
 
 h3 {
@@ -330,7 +323,7 @@ h3 {
     color: white;
     font-size: 24px;
     line-height: 1px;
-    font-family: monospace;
+    font-family: "Akkurat", Helvetica, sans-serif;
 }
 
 .title {
@@ -391,11 +384,12 @@ h3 {
     position: fixed;
     color: white;
     font-size: 16px;
-    font-family: monospace;
+    font-family: "Akkurat", Helvetica, sans-serif;
     text-transform: uppercase;
     bottom: 15px;
     left: 20px;
     z-index: 11;
+    text-decoration: none;
 }
 
 .row {
@@ -455,10 +449,10 @@ h3 {
 }
 
 .side-carousel {
-/*              width: 100px;
-*/              height: 100%;
+    width: 100px;
+    height: 100%;
     position: fixed;
-    margin-top: 150px;
+    margin-top: 100px;
     z-index: 1;
 }
 
