@@ -102,15 +102,18 @@
 
                 window.addEventListener("scroll", scrollEventHandler, true);
 
-
                 if (scroll >= 10) {
                     $(".slider").addClass("scrolled");
                 }
-
                 if (scroll >= pos.top & scroll >= $(window).height()) {
                     s.addClass("at-the-bottom");
-                    window.addEventListener("scroll", scrollEventHandler, false);
-                }
+
+
+
+                    // scrollEventHandler.stop(); {
+                    //     return;
+                    // }
+                } 
 
                 if (window.pageXOffset == redirect_1) {
                     $(".slider").addClass('at-the-left-edge');
