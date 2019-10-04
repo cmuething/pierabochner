@@ -197,10 +197,6 @@ a:link {
     overflow-x: hidden;
 }
 
-.overflowAuto {
-    overflow: auto;
-}
-
 .slider {
     position: relative;
     background-color: #000;

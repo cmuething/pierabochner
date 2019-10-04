@@ -93,7 +93,9 @@
                 // window.addEventListener("scroll", scrollEventHandler, true);
 
                 var horizontalTest = new Boolean(false);
-                
+
+                var $body = $(document);
+
             $(window).scroll(function() { 
 
                 var scroll = $(window).scrollTop();  
@@ -101,11 +103,14 @@
                 var s = $(".slider");
                 var pos = s.position();
 
-                var leftEdge = document.getElementById("trigger1")
+                var leftEdge = document.getElementById("trigger1");
                 var redirect_1 = leftEdge.offsetLeft;
 
-                var rightEdge = document.getElementById("trigger2")
+                var rightEdge = document.getElementById("trigger2");
                 var redirect_2 = rightEdge.offsetRight;
+
+                var oldScrollTop = $(window).scrollTop();
+                var oldScrollLeft = $(window).scrollLeft();
 
                 // var scrollEventHandler = function() {
                 //   window.scroll(0, window.pageYOffset)
@@ -119,10 +124,11 @@
 
                 if (scroll >= pos.top && scroll >= $(window).height()) {
                     $("body").removeClass("at-the-bottom");
-                    $("body").addClass("overflowAuto");
                     window.scrollTo(1, $(window).height());
 
                     horizontalTest = true;
+
+                    console.log("hello4");
 
                     // scrollEventHandler.stop(); {
                     //     return;
@@ -130,15 +136,23 @@
                 } 
 
                 if (window.pageXOffset == redirect_1) {
+                        console.log("hello2");
+
                     $(".slider").addClass('at-the-left-edge');
 
                     if (horizontalTest === true) {
                         console.log("hello");
-                        // $('#intro-video').removeClass('fixed-video');
-                        // window.scrollTo(0, 0);
+                        $('#intro-video').removeClass('fixed-video');
+                        window.scrollTo(0, $(window).height());
                         $("body").addClass("at-the-bottom");
-                        $("body").removeClass("overflowAuto");
                         horizontalTest = false;
+
+                //         $body.bind('scroll', function() {
+                //             // "Disable" the horizontal scroll.
+                //             if ($body.scrollLeft() !== 0) {
+                //                 $body.scrollLeft(0);
+                //             }
+                //         });
                     }
                         // $("html, body").unbind('scroll').scroll();
 
@@ -146,8 +160,22 @@
                 }
 
                 else {
+
+
+                    console.log("hello3");
+
                     $(".slider").removeClass('at-the-left-edge');
-                    // $('#intro-video').addClass('fixed-video'); 
+                    $('#intro-video').addClass('fixed-video'); 
+                    
+                    if (oldScrollTop == $(window).scrollTop()) {
+                        
+                        horizontalTest = true;
+
+                    }
+                   
+                    oldScrollTop = $(window).scrollTop();
+                    oldScrollLeft = $(window).scrollLeft();
+
                         $("html, body").mousewheel(function(event, delta) {
 
                         this.scrollLeft -= (delta * .15);
