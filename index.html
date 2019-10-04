@@ -85,6 +85,9 @@
         </script>
 
         <script type="text/javascript">
+
+                var horizontalTest = new Boolean(false);
+
             $(window).scroll(function() {    
                 var scroll = $(window).scrollTop();
                 var s = $(".slider");
@@ -96,19 +99,21 @@
                 var rightEdge = document.getElementById("trigger2")
                 var redirect_2 = rightEdge.offsetRight;
 
-                var scrollEventHandler = function() {
-                  window.scroll(0, window.pageYOffset)
-                }
+                // var scrollEventHandler = function() {
+                //   window.scroll(0, window.pageYOffset)
+                // }
 
-                window.addEventListener("scroll", scrollEventHandler, true);
+                // window.addEventListener("scroll", scrollEventHandler, true);
 
                 if (scroll >= 10) {
                     $(".slider").addClass("scrolled");
                 }
+
                 if (scroll >= pos.top & scroll >= $(window).height()) {
                     s.addClass("at-the-bottom");
+                    window.scrollTo(1, $(window).height());
 
-
+                    horizontalTest = true;
 
                     // scrollEventHandler.stop(); {
                     //     return;
@@ -117,20 +122,28 @@
 
                 if (window.pageXOffset == redirect_1) {
                     $(".slider").addClass('at-the-left-edge');
+
+                    if (horizontalTest === true) {
+                        console.log("hello");
+                        $('#intro-video').removeClass('fixed-video');
+                        window.scrollTo(0, 0);
+                        horizontalTest = false;
+                    }
+                        // $("html, body").unbind('scroll').scroll();
+
+                    //return to default scrolling
                 }
 
                 else {
                     $(".slider").removeClass('at-the-left-edge');
-                    // $('#intro-video').addClass('fixed-video'); 
-                    // function scrollHorizontally() {
+                    $('#intro-video').addClass('fixed-video'); 
                         $("html, body").mousewheel(function(event, delta) {
 
-                        this.scrollLeft -= (delta * .5);
+                        this.scrollLeft -= (delta * .15);
 
                         event.preventDefault();
 
                         });
-                    // }
                 }
 
                 //try to make it conditional, that as soon as it has all three, you can scroll vertically. still need to figure out how to return to the default scrolling
