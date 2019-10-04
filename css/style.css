@@ -193,6 +193,14 @@ a:link {
     overflow-x: hidden;
 }*/
 
+.at-the-bottom {
+    overflow-x: hidden;
+}
+
+.overflowAuto {
+    overflow: auto;
+}
+
 .slider {
     position: relative;
     background-color: #000;
@@ -215,7 +223,7 @@ a:link {
 }
 
 .fixed-video {
-    position: fixed;
+    display: none;
     opacity: 0;
 }
 

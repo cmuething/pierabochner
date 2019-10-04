@@ -86,10 +86,18 @@
 
         <script type="text/javascript">
 
-                var horizontalTest = new Boolean(false);
+                // var scrollEventHandler = function() {
+                //   window.scroll(0, window.pageYOffset)
+                // }
 
-            $(window).scroll(function() {    
-                var scroll = $(window).scrollTop();
+                // window.addEventListener("scroll", scrollEventHandler, true);
+
+                var horizontalTest = new Boolean(false);
+                
+            $(window).scroll(function() { 
+
+                var scroll = $(window).scrollTop();  
+
                 var s = $(".slider");
                 var pos = s.position();
 
@@ -109,8 +117,9 @@
                     $(".slider").addClass("scrolled");
                 }
 
-                if (scroll >= pos.top & scroll >= $(window).height()) {
-                    s.addClass("at-the-bottom");
+                if (scroll >= pos.top && scroll >= $(window).height()) {
+                    $("body").removeClass("at-the-bottom");
+                    $("body").addClass("overflowAuto");
                     window.scrollTo(1, $(window).height());
 
                     horizontalTest = true;
@@ -125,8 +134,10 @@
 
                     if (horizontalTest === true) {
                         console.log("hello");
-                        $('#intro-video').removeClass('fixed-video');
-                        window.scrollTo(0, 0);
+                        // $('#intro-video').removeClass('fixed-video');
+                        // window.scrollTo(0, 0);
+                        $("body").addClass("at-the-bottom");
+                        $("body").removeClass("overflowAuto");
                         horizontalTest = false;
                     }
                         // $("html, body").unbind('scroll').scroll();
@@ -136,7 +147,7 @@
 
                 else {
                     $(".slider").removeClass('at-the-left-edge');
-                    $('#intro-video').addClass('fixed-video'); 
+                    // $('#intro-video').addClass('fixed-video'); 
                         $("html, body").mousewheel(function(event, delta) {
 
                         this.scrollLeft -= (delta * .15);
@@ -243,7 +254,7 @@
 
 	</head>
 
-	<body class="black">
+	<body class="black at-the-bottom">
         
 		<nav class="result" id="header">
 			<div class="logo">
