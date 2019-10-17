@@ -22,6 +22,14 @@
         margin-top: 30% !important;
     }
 
+    .gap {
+        display: none !important;
+    }
+
+    .intro {
+        width: 150% !important;
+    }
+
     /*#video {
         top: 10% !important;
         left: -15% !important;
@@ -36,6 +44,16 @@
     .title {
         display: none;
     }
+
+    .toggled {
+        width: 100% !important;
+    }
+
+    .table {
+        font-size: 32px !important;
+        line-height: 2;
+    }
+
 }
 
 body {
