@@ -3,59 +3,6 @@
     src: url("../fonts/akkurat-bold.otf");
 }
 
-@media only screen and (max-width: 1000px) {
-    .logo {
-        width: 150px !important;
-    }
-
-    nav {
-        top: 0;
-    }
-
-    .menu-items {
-        font-size: 24px !important;
-        height: 95px !important;
-    }
-
-    .pop-up {
-        font-size: 2em;
-        margin-top: 30% !important;
-    }
-
-    .gap {
-        display: none !important;
-    }
-
-    .intro {
-        width: 150% !important;
-    }
-
-    /*#video {
-        top: 10% !important;
-        left: -15% !important;
-        width: 115% !important;
-        height: 115% !important; 
-    }
-
-    #video-frame {
-        padding:100% 0 0 0; 
-    }*/
-
-    .title {
-        display: none;
-    }
-
-    .toggled {
-        width: 100% !important;
-    }
-
-    .table {
-        font-size: 32px !important;
-        line-height: 2;
-    }
-
-}
-
 body {
 	font-family: "Akkurat", Helvetica, sans-serif;
 	background-color: #000;
@@ -512,4 +459,62 @@ h3 {
     min-height: 100%; 
     z-index: -1; 
     background-color: black;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .logo {
+        width: 150px;
+    }
+
+    nav {
+        top: 0;
+    }
+
+    .menu-items {
+        font-size: 24px;
+        height: 95px;
+    }
+
+    .pop-up {
+        font-size: 2em;
+        margin-top: 30%;
+    }
+
+    .gap {
+        display: none;
+    }
+
+    .intro {
+        width: 150%;
+    }
+
+    /*#video {
+        top: 10% !important;
+        left: -15% !important;
+        width: 115% !important;
+        height: 115% !important; 
+    }
+
+    #video-frame {
+        padding:100% 0 0 0; 
+    }*/
+
+    .title {
+        display: none;
+    }
+
+    .toggled {
+        width: 100%;
+    }
+
+    .table {
+        font-size: 32px;
+        line-height: 2;
+    }
+
+    .slide {
+        width: 100vw;
+    }
+
 }
