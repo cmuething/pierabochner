@@ -25,19 +25,216 @@
             });
         </script>
 
-        <script type="text/javascript">
-        //scroll horizontally on vertical scrolling
-            // $(function() {
+        <script>
 
-            // $("html, body").mousewheel(function(event, delta) {
+        //trying to turn on gradient when the candle is in the view
+        //maybe add to the else statement of the responsiveness test
 
-            // this.scrollLeft -= (delta * .5);
+        //     $( document ).ready(function() {
+            
+        //     (function($) {
+
+        //     $.fn.visible = function(partial) {
     
-            // event.preventDefault();
+        //           var $t            = $(this),
+        //               $w            = $(window),
+        //               viewTop       = $w.scrollTop(),
+        //               viewBottom    = viewTop + $w.height(),
+        //               _top          = $t.offset().top,
+        //               _bottom       = _top + $t.height(),
+        //               compareTop    = partial === true ? _bottom : _top,
+        //               compareBottom = partial === true ? _top : _bottom;
+                
+        //         return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 
-            //    });
+        //       };
+                
+        //     })(jQuery);
 
-            // });
+        //     $(window).scroll(function(event) {
+              
+        //       $("p").each(function(i, el) {
+        //         var el = $(el);
+        //         if (el.visible(true)) {
+        //           el.addClass("gradient-test"); 
+        //         } else {
+        //           el.removeClass("gradient-test");
+        //         }
+        //       });
+              
+        //     })
+        // });
+        </script>
+
+        <script type="text/javascript">
+        //scroll horizontally on vertical scrolling, but only when on desktop size screens
+            function responsiveTest() {
+
+            if (x.matches) {
+
+                    //using the scrollEventHandler to restrict the horizontal scrolling on load, when the page is loaded; used CSS method instead
+                    //using bind/unbind to try to re-enable default scrolling; that's still not working
+
+                    // var scrollEventHandler = function() {
+                    //   window.scroll(0, window.pageYOffset)
+                    // }
+
+                    var horizontalTest = new Boolean(false);
+
+                    var $body = $(document);
+
+                $(window).scroll(function() { 
+
+                    var scroll = $(window).scrollTop();  
+
+                    var s = $(".slider");
+                    var pos = s.position();
+
+                    var leftEdge = document.getElementById("trigger1");
+                    var redirect_1 = leftEdge.offsetLeft;
+
+                    var rightEdge = document.getElementById("trigger2");
+                    var redirect_2 = rightEdge.offsetRight;
+
+                    var oldScrollTop = $(window).scrollTop();
+                    var oldScrollLeft = $(window).scrollLeft();
+
+                    // var scrollEventHandler = function() {
+                    //   window.scroll(0, window.pageYOffset)
+                    // }
+
+                    // window.addEventListener("scroll", scrollEventHandler, true);
+
+                    if (scroll >= 10) {
+                        $(".slider").addClass("scrolled");
+                    }
+
+                    if (scroll >= pos.top && scroll >= $(window).height()) {
+                        $("body").removeClass("at-the-bottom");
+                        window.scrollTo(1, $(window).height());
+
+                        horizontalTest = true;
+
+                        console.log("hello4");
+
+                        // scrollEventHandler.stop(); {
+                        //     return;
+                        // }
+                    } 
+
+                    if (window.pageXOffset == redirect_1) {
+                            console.log("hello2");
+
+                        $(".slider").addClass('at-the-left-edge');
+
+                        if (horizontalTest === true) {
+                            console.log("hello");
+                            $('#intro-video').removeClass('fixed-video');
+                            window.scrollTo(0, $(window).height());
+                            $("body").addClass("at-the-bottom");
+                            horizontalTest = false;
+
+                    //         $body.bind('scroll', function() {
+                    //             // "Disable" the horizontal scroll.
+                    //             if ($body.scrollLeft() !== 0) {
+                    //                 $body.scrollLeft(0);
+                    //             }
+                    //         });
+                        }
+                            // $("html, body").unbind('scroll').scroll();
+
+                        //return to default scrolling
+                    }
+
+                    else {
+
+
+                        console.log("hello3");
+
+                        $(".slider").removeClass('at-the-left-edge');
+                        $('#intro-video').addClass('fixed-video'); 
+                        
+                        if (oldScrollTop == $(window).scrollTop()) {
+                            
+                            horizontalTest = true;
+
+                        }
+                       
+                        oldScrollTop = $(window).scrollTop();
+                        oldScrollLeft = $(window).scrollLeft();
+
+                            $("html, body").mousewheel(function(event, delta) {
+
+                            this.scrollLeft -= (delta * .15);
+
+                            event.preventDefault();
+
+                            });
+                    }
+
+                    //try to make it conditional, that as soon as it has all three, you can scroll vertically. still need to figure out how to return to the default scrolling
+
+                    // if ($(".slider").hasClass('at-the-left-edge') || $(".slider").hasClass('at-the-bottom')) {
+                    //     $('#intro-video').removeClass('fixed-video'); 
+                    //     window.addEventListener("mousewheel", scrollHorizontally, false);
+                    // }
+
+                    // else {
+                    //     $('#intro-video').addClass('fixed-video'); 
+                    // }
+
+                });
+
+                }
+
+                else {
+
+                //trying to turn on gradient when the candle is in the view
+                //maybe add to the else statement of the responsiveness test
+
+                    $( document ).ready(function() {
+                    
+                    (function($) {
+
+                    $.fn.visible = function(partial) {
+            
+                          var $t            = $(this),
+                              $w            = $(window),
+                              viewTop       = $w.scrollTop(),
+                              viewBottom    = viewTop + $w.height(),
+                              _top          = $t.offset().top,
+                              _bottom       = _top + $t.height(),
+                              compareTop    = partial === true ? _bottom : _top,
+                              compareBottom = partial === true ? _top : _bottom;
+                        
+                        return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+                      };
+                        
+                    })(jQuery);
+
+                    $(window).scroll(function(event) {
+                      
+                      $(".slide").each(function(i, el) {
+                        var el = $(el);
+                        if (el.visible(true)) {
+                          el.addClass("gradient-test"); 
+                        } else {
+                          el.removeClass("gradient-test");
+                        }
+                      });
+                      
+                    })
+                });
+
+            }
+
+            }
+
+            var x = window.matchMedia("(min-width: 700px)")
+            responsiveTest(x) // Call listener function at run time
+            x.addListener(responsiveTest) // Attach listener function on state changes
+            
         </script>
         
         <script type="text/javascript">
@@ -69,122 +266,7 @@
             });
         </script>
 
-        <script type="text/javascript">
-        //using the scrollEventHandler to restrict the horizontal scrolling on load, when the page is loaded; used CSS method instead
-        //using bind/unbind to try to re-enable default scrolling; that's still not working
-
-                // var scrollEventHandler = function() {
-                //   window.scroll(0, window.pageYOffset)
-                // }
-
-                // window.addEventListener("scroll", scrollEventHandler, true);
-
-                var horizontalTest = new Boolean(false);
-
-                var $body = $(document);
-
-            $(window).scroll(function() { 
-
-                var scroll = $(window).scrollTop();  
-
-                var s = $(".slider");
-                var pos = s.position();
-
-                var leftEdge = document.getElementById("trigger1");
-                var redirect_1 = leftEdge.offsetLeft;
-
-                var rightEdge = document.getElementById("trigger2");
-                var redirect_2 = rightEdge.offsetRight;
-
-                var oldScrollTop = $(window).scrollTop();
-                var oldScrollLeft = $(window).scrollLeft();
-
-                // var scrollEventHandler = function() {
-                //   window.scroll(0, window.pageYOffset)
-                // }
-
-                // window.addEventListener("scroll", scrollEventHandler, true);
-
-                if (scroll >= 10) {
-                    $(".slider").addClass("scrolled");
-                }
-
-                if (scroll >= pos.top && scroll >= $(window).height()) {
-                    $("body").removeClass("at-the-bottom");
-                    window.scrollTo(1, $(window).height());
-
-                    horizontalTest = true;
-
-                    console.log("hello4");
-
-                    // scrollEventHandler.stop(); {
-                    //     return;
-                    // }
-                } 
-
-                if (window.pageXOffset == redirect_1) {
-                        console.log("hello2");
-
-                    $(".slider").addClass('at-the-left-edge');
-
-                    if (horizontalTest === true) {
-                        console.log("hello");
-                        $('#intro-video').removeClass('fixed-video');
-                        window.scrollTo(0, $(window).height());
-                        $("body").addClass("at-the-bottom");
-                        horizontalTest = false;
-
-                //         $body.bind('scroll', function() {
-                //             // "Disable" the horizontal scroll.
-                //             if ($body.scrollLeft() !== 0) {
-                //                 $body.scrollLeft(0);
-                //             }
-                //         });
-                    }
-                        // $("html, body").unbind('scroll').scroll();
-
-                    //return to default scrolling
-                }
-
-                else {
-
-
-                    console.log("hello3");
-
-                    $(".slider").removeClass('at-the-left-edge');
-                    $('#intro-video').addClass('fixed-video'); 
-                    
-                    if (oldScrollTop == $(window).scrollTop()) {
-                        
-                        horizontalTest = true;
-
-                    }
-                   
-                    oldScrollTop = $(window).scrollTop();
-                    oldScrollLeft = $(window).scrollLeft();
-
-                        $("html, body").mousewheel(function(event, delta) {
-
-                        this.scrollLeft -= (delta * .15);
-
-                        event.preventDefault();
-
-                        });
-                }
-
-                //try to make it conditional, that as soon as it has all three, you can scroll vertically. still need to figure out how to return to the default scrolling
-
-                // if ($(".slider").hasClass('at-the-left-edge') || $(".slider").hasClass('at-the-bottom')) {
-                //     $('#intro-video').removeClass('fixed-video'); 
-                //     window.addEventListener("mousewheel", scrollHorizontally, false);
-                // }
-
-                // else {
-                //     $('#intro-video').addClass('fixed-video'); 
-                // }
-
-            });
-        </script>
+        
 
 
         <script type="text/javascript">
@@ -273,7 +355,7 @@
         
 		<nav class="result" id="header">
 			<div class="logo">
-				<a href="https://www.instagram.com/piboch/?hl=en" target="_blank">
+				<a href="https://www.pierabochner.com" target="_blank">
 					<img src="img/piera-01.svg">
 				</a>
 			</div>
@@ -308,7 +390,7 @@
                 <div class="slide select">
                     <a href="file:///Users/connormuething/Desktop/PIERA/pierabochner/grid_test_2.html" target="_blank">
                         <p>Candle Title #3</p>
-                        <div class="no-gradient" id="background1"></div>
+                        <div class="no-gradient" id="background1" id="id1"></div>
                         <iframe id="video-1" src="https://player.vimeo.com/video/353941600?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                         </iframe>
                     </a>
