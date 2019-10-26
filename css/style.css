@@ -143,6 +143,7 @@ a:link {
 
 .table a {
     display: block;
+    color: black;
 }
 
 .intro {
@@ -159,7 +160,12 @@ a:link {
 }*/
 
 .at-the-bottom {
+/*    overflow-x: hidden;
+*/}
+
+.at-the-left-edge {
     overflow-x: hidden;
+    max-width: 100vw;
 }
 
 .slider {
@@ -183,9 +189,15 @@ a:link {
     margin-left: 0px !important;
 }
 
-.fixed-video {
+
+/*.fixed-video {
     display: none;
     opacity: 0;
+}
+*/
+
+.fixed-video {
+    display: none;
 }
 
 .fixed-carousel {
@@ -515,6 +527,9 @@ h3 {
     .table {
         font-size: 32px;
         line-height: 2;
+        text-align: center;
+        width: 100%;
+        padding: 20px 0 0 0;
     }
 
     .slider {
@@ -526,8 +541,30 @@ h3 {
         display: block;
     }
 
+    .slide p {
+        padding-left: 0px;
+    }
+
     .gradient-test {
         opacity: 1;
+        transition: opacity 1s ease;
+        transition-delay: 1.5s;
+        background-size: 200% 100%;
+        position: absolute;
+        margin-left: 75px;
+        z-index: 5;
+        mix-blend-mode: multiply;
+        height: 100%;
+        max-width: 90%;
+        overflow: hidden;
+    }
+
+    #video {
+        height: 250%;
+    }
+
+    #video-1, #video-2 {
+        margin-left: 0px;
     }
 
 }
