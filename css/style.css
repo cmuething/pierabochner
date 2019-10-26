@@ -208,6 +208,7 @@ a:link {
     position: relative;
     display: inline-block;
     height: 100%;
+    background-color: #000;
 }
 
 .slide a {
@@ -539,6 +540,7 @@ h3 {
 
     .slide {
         display: block;
+        pointer-events: none;
     }
 
     .slide p {
@@ -551,11 +553,11 @@ h3 {
         transition-delay: 1.5s;
         background-size: 200% 100%;
         position: absolute;
-        margin-left: 75px;
+        right: 0; 
         z-index: 5;
         mix-blend-mode: multiply;
         height: 100%;
-        max-width: 90%;
+        max-width: 100%;
         overflow: hidden;
     }
 
