@@ -17,11 +17,16 @@
                 e.preventDefault();
                 $("#sidenav-toggle").toggleClass("toggled");
                     var icon = $(this).parent().find(".container")
-                    if (icon.hasClass('open'))
+                    var s = $("body");
+                    if (icon.hasClass('open')) {
                         icon.removeClass('open').addClass('change');
-                    else
+                        s.addClass('lock');
+                    }
+                    else {
                         icon.removeClass('change').addClass('open');
-            });
+                        s.removeClass('lock');
+                    }
+                });
             });
         </script>
 
@@ -57,7 +62,7 @@
                 
                     randomColourNine = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
                     
-                    var background = document.querySelectorAll('#background1, #background2, #background3, #background4, #background5');
+                    var background = document.querySelectorAll('#background1, #background2, #background3, #background4, #background5, #background6, #background7');
 
                     for (var i = 0; i < background.length; i++)
                     {
@@ -144,6 +149,7 @@
 
                     if (scroll >= 10) {
                         $(".slider").addClass("scrolled");
+                        $(".caret").addClass("scrolledDown");
                     }
 
                     if (scroll >= pos.top && scroll >= $(window).height()) {
@@ -223,7 +229,9 @@
                     //   }
 
                     $(window).scroll(function(event) {
-                      
+
+                    var scroll = $(window).scrollTop();
+
                       $(".no-gradient").each(function(i, el) {
                         var el = $(el);
                         if (el.visible(true)) { 
@@ -240,6 +248,13 @@
                             debounce = null;
                             firstColour();
                             }, 1000);
+
+                        if (scroll >= 10) {
+                        $(".caret").addClass("scrolledDown");
+                    }
+                        if ($(".caret").hasClass('scrolledDown') && scroll == 0) {
+                        $(".caret").removeClass("scrolledDown");
+                        }
                     });
 
                 });
@@ -336,6 +351,10 @@
             </div>
 		</nav>
 
+        <div class="caret">
+            <p><i class="arrow down"></i></p>
+        </div>
+
         <div class="sidenav" id="sidenav-toggle" >
             <div class="table">
                 <a href="https://pierabochner.bigcartel.com/stockists">Stockists</a>
@@ -422,6 +441,10 @@
                 </div>
 
                 <div class="gap" id="trigger2">
+                </div>
+
+                <div class="attribution">
+                    <p>site designed & developed by connor muething</p>
                 </div>
                 
         </div>
