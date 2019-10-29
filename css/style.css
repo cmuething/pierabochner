@@ -527,7 +527,7 @@ h3 {
     }
 
     .lock {
-        position: fixed;
+        overflow-y: hidden;
     }
 
     body {
