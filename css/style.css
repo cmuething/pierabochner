@@ -94,7 +94,7 @@ nav {
 .container {
     float: right;
     right: 0;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-right: 20px;
     z-index: 12;
     cursor: pointer;
@@ -104,7 +104,7 @@ nav {
     background-color: #fff;
     width: 35px;
     height: 5px;
-    margin: 6px 0;
+    margin: 3px 0;
     transition: 0.4s;
 }
 
@@ -129,8 +129,8 @@ nav {
 
 /* Rotate last bar */
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-  transform: rotate(45deg) translate(-8px, -8px) ;
+  -webkit-transform: rotate(45deg) translate(-4px, -2px) ;
+  transform: rotate(45deg) translate(-4px, -2px) ;
 }
 
 a:link {
