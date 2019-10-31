@@ -555,6 +555,12 @@ h3 {
         overscroll-behavior: auto;
         overflow-x: hidden;
         -webkit-overflow-x: hidden;
+        height: 100%;
+    }
+
+    .intro {
+        overflow-x: hidden;
+        -webkit-overflow-x: hidden;
     }
 
     .menu-items {
@@ -606,6 +612,8 @@ h3 {
         padding-left: 0;
         width: 100vw;
         max-width: 100vw;
+        overflow-x: hidden;
+        -webkit-overflow-x: hidden;
     }
 
     .slide {
