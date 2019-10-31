@@ -155,13 +155,13 @@
                     if (scroll >= pos.top && scroll >= $(window).height()) {
                         $("body").addClass("at-the-bottom");
                         $('#intro-video').addClass('fixed-video');
-                         $("html, body").mousewheel(function(event, delta) {
+                         // $("html, body").mousewheel(function(event, delta) {
 
-                            this.scrollLeft -= (delta * .15);
+                         //    this.scrollLeft -= (delta * .15);
 
-                            event.preventDefault();
+                         //    event.preventDefault();
 
-                            });
+                         //    });
 
                     } 
 

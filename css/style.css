@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: "Akkurat";
     src: url("../fonts/akkurat-bold.otf");
@@ -533,6 +535,7 @@ h3 {
     body {
         overscroll-behavior: auto;
         overflow-x: hidden;
+        -webkit-overflow-x: hidden;
     }
 
     .menu-items {
