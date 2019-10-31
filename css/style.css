@@ -582,10 +582,12 @@ h3 {
     }
 
     #video {
-        top: 10% !important;
+        /*top: 10% !important;
         left: -15% !important;
         width: 115% !important;
-        height: 115% !important; 
+        height: 115% !important;*/ 
+        overflow-x: hidden;
+        -webkit-overflow-x: hidden;
     }
 
     #video-frame {
