@@ -581,7 +581,7 @@ h3 {
         width: 150%;
     }
 
-    /*#video {
+    #video {
         top: 10% !important;
         left: -15% !important;
         width: 115% !important;
@@ -589,8 +589,9 @@ h3 {
     }
 
     #video-frame {
-        padding:100% 0 0 0; 
-    }*/
+        overflow-x: hidden;
+        -webkit-overflow-x: hidden; 
+    }
 
     .title {
         display: none;
