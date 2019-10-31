@@ -553,14 +553,19 @@ h3 {
 
     body {
         overscroll-behavior: auto;
-        overflow-x: hidden;
-        -webkit-overflow-x: hidden;
+        /*overflow-x: hidden;
+        -webkit-overflow-x: hidden;*/
         height: 100%;
     }
 
-    .intro {
+    .mobileWrapper {
         overflow-x: hidden;
         -webkit-overflow-x: hidden;
+    }
+
+    .intro {
+        /*overflow-x: hidden;
+        -webkit-overflow-x: hidden;*/
     }
 
     .menu-items {
@@ -586,13 +591,13 @@ h3 {
         left: -15% !important;
         width: 115% !important;
         height: 115% !important;*/ 
-        overflow-x: hidden;
-        -webkit-overflow-x: hidden;
+        /*overflow-x: hidden;
+        -webkit-overflow-x: hidden;*/
     }
 
     #video-frame {
-        overflow-x: hidden;
-        -webkit-overflow-x: hidden; 
+        /*overflow-x: hidden;
+        -webkit-overflow-x: hidden;*/ 
     }
 
     .title {
@@ -615,8 +620,8 @@ h3 {
         padding-left: 0;
         width: 100vw;
         max-width: 100vw;
-        overflow-x: hidden;
-        -webkit-overflow-x: hidden;
+        /*overflow-x: hidden;
+        -webkit-overflow-x: hidden;*/
     }
 
     .slide {
