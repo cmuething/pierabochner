@@ -274,6 +274,9 @@
             window.onload = function() {
              setTimeout (function () {
               scrollTo(0,0);
+              if ($("#intro-video").hasClass('fixed-video')) {
+                        $("#intro-video").removeClass("fixed-video");
+                }
              }, 100);
             }
         </script>
