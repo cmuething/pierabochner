@@ -110,7 +110,7 @@
 
         <script type="text/javascript">
         //scroll horizontally on vertical scrolling, but only when on desktop size screens
-        $(document).ready(function(){   
+        // $(document).ready(function(){   
 
             function responsiveTest() {
 
@@ -170,6 +170,13 @@
                     }
 
 //remove from here
+                    
+                    Site.scrollProject = function(){
+                            var scroll = $(document).scrollTop();
+                            Site.scroll_position = scroll/Site.document_height * Site.image_width;
+                            console.log(Site.image_width);
+                            $('#full-carousel').css('transform', 'translateX(-' + Site.scroll_position + 'px)')
+                    }  
 
                     if (Site.body.hasClass("at-the-bottom")) {
                         // $(document).imagesLoaded(function(){
@@ -186,13 +193,6 @@
 
                         $(window).on('scroll', Site.scrollProject);
                       }
-
-                    Site.scrollProject = function(){
-                            var scroll = $(document).scrollTop();
-                            Site.scroll_position = scroll/Site.document_height * Site.image_width;
-                            console.log(Site.image_width);
-                            $('#full-carousel').css('transform', 'translateX(-' + Site.scroll_position + 'px)')
-                    }  
 
 //to here
 
@@ -280,7 +280,7 @@
             responsiveTest(x) // Call listener function at run time
             x.addListener(responsiveTest) // Attach listener function on state changes
 
-            }) 
+            // }) 
 
         </script>
 
@@ -321,82 +321,82 @@
             </div>
         </div>
 
-        <div onmouseover="firstColour()" class="slider" id="full-carousel">
+        <div onmouseover="firstColour()" class="slider">
+            <div  id="full-carousel">
+                <div class="gap" id="trigger1">
+                </div>
 
-            <div class="gap" id="trigger1">
+                    <div class="slide">
+                        <a href="https://pierabochner.bigcartel.com/category/romanesco">
+                            <p>Romanesco</p>
+                            <div class="no-gradient the-wait" id="background1" id="id1"></div>
+                            <iframe id="video-1" src="https://player.vimeo.com/video/353941600?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        </a>
+                    </div>
+
+                    <div class="slide">
+                        <a href="https://pierabochner.bigcartel.com/category/sugar-apple">
+                            <p>Sugar Apple</p>
+                            <div class="no-gradient" id="background2"></div>
+                            <iframe id="video-1" src="https://player.vimeo.com/video/353941619?autoplay=1&loop=1&autopause=0&background=1" frameborder="0"  webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        </a>
+                    </div>
+                        
+                    <div class="slide">
+                        <a href="https://pierabochner.bigcartel.com/category/kiwano">
+                            <p>Kiwano</p>
+                            <div class="no-gradient" id="background3"></div>
+                            <iframe id="video-1" src="https://player.vimeo.com/video/353941609?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        </a>
+                    </div>
+                    
+                        
+                    <div class="slide">
+                        <a href="https://pierabochner.bigcartel.com/category/bumpy-gourd">
+                            <p>Bumpy Gourd</p>
+                            <div class="no-gradient" id="background4"></div>
+                            <iframe id="video-1" src="https://player.vimeo.com/video/353941592?autoplay=1&loop=1&autopause=0&background=1" width="640" height="1278" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+                            </iframe>
+                        </a>
+                    </div>
+                    
+                    <div class="slide">
+                        <a href="https://pierabochner.bigcartel.com/category/bitter-melon">
+                            <p>Bitter Melon</p>
+                            <div class="no-gradient" id="background5"></div>
+                            <iframe id="video-1" src="https://player.vimeo.com/video/353942237?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        </a>
+                    </div>
+
+                    <div class="slide">
+                        <a href="https://pierabochner.bigcartel.com/category/assorted-minis">
+                            <p>Assorted Minis</p>
+                            <div class="no-gradient" id="background6"></div>
+                            <iframe id="video-1" src="https://player.vimeo.com/video/353942237?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        </a>
+                    </div>
+
+                    <div class="slide">
+                        <a href="https://pierabochner.bigcartel.com/category/starfruit">
+                            <p>Starfruit</p>
+                            <div class="no-gradient" id="background7"></div>
+                            <iframe id="video-1" src="https://player.vimeo.com/video/353942237?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        </a>
+                    </div>
+
+                    <div class="gap" id="trigger2">
+                    </div>
+
+                    <div class="attribution">
+                        <p>site designed & developed by connor muething</p>
+                    </div>
+                </div>    
             </div>
-
-                <div class="slide">
-                    <a href="https://pierabochner.bigcartel.com/category/romanesco">
-                        <p>Romanesco</p>
-                        <div class="no-gradient the-wait" id="background1" id="id1"></div>
-                        <iframe id="video-1" src="https://player.vimeo.com/video/353941600?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    </a>
-                </div>
-
-                <div class="slide">
-                    <a href="https://pierabochner.bigcartel.com/category/sugar-apple">
-                        <p>Sugar Apple</p>
-                        <div class="no-gradient" id="background2"></div>
-                        <iframe id="video-1" src="https://player.vimeo.com/video/353941619?autoplay=1&loop=1&autopause=0&background=1" frameborder="0"  webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    </a>
-                </div>
-                    
-                <div class="slide">
-                    <a href="https://pierabochner.bigcartel.com/category/kiwano">
-                        <p>Kiwano</p>
-                        <div class="no-gradient" id="background3"></div>
-                        <iframe id="video-1" src="https://player.vimeo.com/video/353941609?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    </a>
-                </div>
-                
-                    
-                <div class="slide">
-                    <a href="https://pierabochner.bigcartel.com/category/bumpy-gourd">
-                        <p>Bumpy Gourd</p>
-                        <div class="no-gradient" id="background4"></div>
-                        <iframe id="video-1" src="https://player.vimeo.com/video/353941592?autoplay=1&loop=1&autopause=0&background=1" width="640" height="1278" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-                        </iframe>
-                    </a>
-                </div>
-                
-                <div class="slide">
-                    <a href="https://pierabochner.bigcartel.com/category/bitter-melon">
-                        <p>Bitter Melon</p>
-                        <div class="no-gradient" id="background5"></div>
-                        <iframe id="video-1" src="https://player.vimeo.com/video/353942237?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    </a>
-                </div>
-
-                <div class="slide">
-                    <a href="https://pierabochner.bigcartel.com/category/assorted-minis">
-                        <p>Assorted Minis</p>
-                        <div class="no-gradient" id="background6"></div>
-                        <iframe id="video-1" src="https://player.vimeo.com/video/353942237?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    </a>
-                </div>
-
-                <div class="slide">
-                    <a href="https://pierabochner.bigcartel.com/category/starfruit">
-                        <p>Starfruit</p>
-                        <div class="no-gradient" id="background7"></div>
-                        <iframe id="video-1" src="https://player.vimeo.com/video/353942237?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    </a>
-                </div>
-
-                <div class="gap" id="trigger2">
-                </div>
-
-                <div class="attribution">
-                    <p>site designed & developed by connor muething</p>
-                </div>
-                
-        </div>
     </body>	
 </html>

@@ -197,28 +197,29 @@ a:link {
 /*    display: none;
 */}
 
-/*.intro-lock {
-    max-width: 100%;
-    overflow-x: hidden;
-}*/
+.intro-lock {
+    max-width: 100vw;
+    overflow: hidden;
+}
 
 .at-the-bottom {
 /*    overflow-x: hidden;
 */}
 
 .at-the-left-edge {
-    overflow-x: hidden;
+    /*overflow-x: hidden;
     -webkit-overflow-x: hidden;
-    max-width: 100vw;
+    max-width: 100vw;*/
 }
 
 .slider {
     position: relative;
     background-color: #000;
     width: 100%;
-    padding-left: 50px;
-    white-space: nowrap;
+/*    padding-left: 50px;
+*/    white-space: nowrap;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .gap {
