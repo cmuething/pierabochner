@@ -256,6 +256,7 @@ a:link {
 
 .slide a {
     pointer-events: cursor;
+    overflow: auto;
 }
 
 .slide p {
@@ -270,23 +271,13 @@ a:link {
     padding-left: 50px;
 }
 
-.no-gradients {
-    opacity: 1;
-    position: absolute;
-    margin-left: 25px;
-    z-index: 5;
-    mix-blend-mode: multiply;
-    height: 12.5%;
-    width: 50%;
-}
-
 .no-gradient {
     opacity: 0;
     position: absolute;
 	margin-left: 75px;
 	z-index: 5;
 	height: 100%;
-	width: 90%;
+	width: 100%;
 }
 
 .no-gradient:hover {
@@ -558,10 +549,10 @@ h3 {
         height: 100%;
     }
 
-    .mobileWrapper {
+/*    .mobileWrapper {
         overflow-x: hidden;
         -webkit-overflow-x: hidden;
-    }
+    }*/
 
     .intro {
         /*overflow-x: hidden;
@@ -675,6 +666,22 @@ h3 {
         margin-top: 75px;
         transform: rotate(0deg);
         -webkit-transform: rotate(0deg);
+    }
+
+}
+
+@media only screen and (min-width: 2000px) {
+
+    .slide {
+        width: 660px;
+    }
+
+    .slide a {
+        margin-left: -25%;
+    }
+
+    #video-1 {
+        width: 150%;
     }
 
 }
