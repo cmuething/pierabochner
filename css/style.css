@@ -620,6 +620,10 @@ h3 {
         pointer-events: none;
     }
 
+    .small {
+        margin-top: -25%;
+    }
+
     .slide p {
         padding-left: 0px;
     }
@@ -652,6 +656,10 @@ h3 {
         margin-left: 0px;
     }
 
+    #video-2 {
+        height: 140%;
+    }
+
     #background7 {
         margin-bottom: 100px;
     }
@@ -680,7 +688,7 @@ h3 {
         margin-left: -25%;
     }
 
-    #video-1 {
+    #video-1, #video-2 {
         width: 150%;
     }
 
