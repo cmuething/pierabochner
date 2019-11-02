@@ -100,7 +100,7 @@
 
                     background[i].style.backgroundImage = "-webkit-linear-gradient("+ randomColourOne +" , "+ randomColourTwo +" ,  "+ randomColourThree +" , "+ randomColourFour +" , "+ randomColourFive +" , "+ randomColourSix +" , "+ randomColourSeven +" , "+ randomColourEight +" , "+ randomColourNine +")";
                     
-                    localStorage.setItem("copyColor", "-webkit-linear-gradient("+ randomColourOne +" , "+ randomColourTwo +" ,  "+ randomColourThree +" , "+ randomColourFour +" , "+ randomColourFive +" , "+ randomColourSix +" , "+ randomColourSeven +" , "+ randomColourEight +" , "+ randomColourNine +")");
+                    // localStorage.setItem("copyColor", "-webkit-linear-gradient("+ randomColourOne +" , "+ randomColourTwo +" ,  "+ randomColourThree +" , "+ randomColourFour +" , "+ randomColourFive +" , "+ randomColourSix +" , "+ randomColourSeven +" , "+ randomColourEight +" , "+ randomColourNine +")");
 
                     }
 
@@ -110,6 +110,8 @@
 
         <script type="text/javascript">
         //scroll horizontally on vertical scrolling, but only when on desktop size screens
+        $(document).ready(function(){   
+
             function responsiveTest() {
 
             if (x.matches) {
@@ -119,6 +121,8 @@
                     var horizontalTest = new Boolean(false);
 
                     var $body = $(document);
+
+                    Site = {}
 
                 $(window).scroll(function() { 
 
@@ -136,6 +140,17 @@
                     var oldScrollTop = $(window).scrollTop();
                     var oldScrollLeft = $(window).scrollLeft();
 
+//remove from here
+
+                    Site.body = $('body');
+                    Site.window_height = $(window).height();
+                    Site.window_width = $(window).width();
+                    Site.document_height = $(document).height() - Site.window_height;
+                    // var font_size = parseInt($('html').css('font-size'));
+                    Site.image_width = 0;
+
+//to here
+
                     if (scroll >= 10) {
                         $(".slider").addClass("scrolled");
                         $(".caret").addClass("scrolledDown");
@@ -144,15 +159,42 @@
                     if (scroll >= pos.top && scroll >= $(window).height()) {
                         $("body").addClass("at-the-bottom");
                         $('#intro-video').addClass('fixed-video');
-                         $("html, body").mousewheel(function(event, delta) {
+                         // $("html, body").mousewheel(function(event, delta) {
 
-                            this.scrollLeft -= (delta * .15);
+                         //    this.scrollLeft -= (delta * .15);
 
-                            event.preventDefault();
+                         //    event.preventDefault();
 
-                            });
+                         //    });
 
                     }
+
+//remove from here
+
+                    if (Site.body.hasClass("at-the-bottom")) {
+                        // $(document).imagesLoaded(function(){
+                          $('.slide').each(function(){
+                            Site.image_width = Site.image_width + $(this).outerWidth() + (120);
+                          });
+                        // })
+
+                        if (Site.window_width > 1050){
+                          Site.image_width = Site.image_width - Site.window_width;
+                        } else{
+                          Site.image_width = Site.image_width - Site.window_width;
+                        }
+
+                        $(window).on('scroll', Site.scrollProject);
+                      }
+
+                    Site.scrollProject = function(){
+                            var scroll = $(document).scrollTop();
+                            Site.scroll_position = scroll/Site.document_height * Site.image_width;
+                            console.log(Site.image_width);
+                            $('#full-carousel').css('transform', 'translateX(-' + Site.scroll_position + 'px)')
+                    }  
+
+//to here
 
                     if (window.pageXOffset == redirect_1) {
                             console.log("hello2");
@@ -237,6 +279,8 @@
             var x = window.matchMedia("(min-width: 700px)")
             responsiveTest(x) // Call listener function at run time
             x.addListener(responsiveTest) // Attach listener function on state changes
+
+            }) 
 
         </script>
 

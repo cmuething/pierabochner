@@ -193,6 +193,10 @@ a:link {
     left: 0;
 }
 
+#intro-video {
+/*    display: none;
+*/}
+
 /*.intro-lock {
     max-width: 100%;
     overflow-x: hidden;
@@ -497,6 +501,7 @@ h3 {
     left:-50%; 
     width:200%; 
     height:200%; 
+
 }
 
 #video-frame { 
