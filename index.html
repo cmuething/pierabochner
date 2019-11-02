@@ -170,13 +170,6 @@
                     }
 
 //remove from here
-                    
-                    Site.scrollProject = function(){
-                            var scroll = $(document).scrollTop();
-                            Site.scroll_position = scroll/Site.document_height * Site.image_width;
-                            console.log(Site.image_width);
-                            $('#full-carousel').css('transform', 'translateX(-' + Site.scroll_position + 'px)')
-                    }  
 
                     if (Site.body.hasClass("at-the-bottom")) {
                         // $(document).imagesLoaded(function(){
@@ -194,14 +187,20 @@
                         $(window).on('scroll', Site.scrollProject);
                       }
 
+                      Site.scrollProject = function(){
+                            var scroll = $(document).scrollTop();
+                            Site.scroll_position = scroll/Site.document_height * Site.image_width;
+                            console.log(Site.image_width);
+                            $('#full-carousel').css('transform', 'translateX(-' + Site.scroll_position + 'px)')
+                    }  
+
 //to here
 
-                    if (window.pageXOffset == redirect_1) {
+                    if (window.pageXOffset >= redirect_1) {
                             console.log("hello2");
                     }
 
                     else {
-
                         $("body").removeClass('at-the-left-edge');
                         $('#intro-video').addClass('fixed-video'); 
 

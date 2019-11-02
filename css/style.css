@@ -191,6 +191,7 @@ a:link {
     position: relative;
     top: 0;
     left: 0;
+    overscroll-behavior: none;
 }
 
 #intro-video {
@@ -220,6 +221,10 @@ a:link {
 */    white-space: nowrap;
     height: 100vh;
     overflow-x: hidden;
+}
+
+#full-carousel {
+    height: 100%;
 }
 
 .gap {
