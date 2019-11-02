@@ -112,10 +112,6 @@
         //scroll horizontally on vertical scrolling, but only when on desktop size screens
             function responsiveTest() {
 
-            var x = window.matchMedia("(min-width: 700px)")
-            responsiveTest(x) // Call listener function at run time
-            x.addListener(responsiveTest) // Attach listener function on state changes
-
             if (x.matches) {
                     //using the scrollEventHandler to restrict the horizontal scrolling on load, when the page is loaded; used CSS method instead
                     //using bind/unbind to try to re-enable default scrolling; that's still not working
@@ -156,6 +152,10 @@
 
                             });
 
+                    }
+
+                    if (window.pageXOffset == redirect_1) {
+                            console.log("hello2");
                     }
 
                     else {
@@ -233,6 +233,10 @@
             }
 
             }
+
+            var x = window.matchMedia("(min-width: 700px)")
+            responsiveTest(x) // Call listener function at run time
+            x.addListener(responsiveTest) // Attach listener function on state changes
 
         </script>
 
