@@ -33,7 +33,6 @@ nav {
     z-index: 11;
     width: 100%;
     height: 55px;
-/*                background-color: black;*/
 }
 
 .caret {
@@ -81,14 +80,11 @@ nav {
 }
 
 .black {
-/*    background-color: #000;
-*//*    filter: invert(0%);
-*/}
+}
 
 .white {
     background-color: #fff;
-/*    filter: invert(100%);
-*/}
+}
 
 .white div {
     -webkit-filter: invert(100%);
@@ -194,30 +190,22 @@ a:link {
     left: 0;
     overscroll-behavior: none;
     overflow: hidden;
-/*    pointer-events: none;
-*/}
+}
 
 #intro-video {
-/*    display: none;
-*/}
+}
 
 .at-the-bottom {
-/*    overflow-x: hidden;
-*/}
+}
 
 .at-the-left-edge {
-    /*overflow-x: hidden;
-    -webkit-overflow-x: hidden;
-    max-width: 100vw;*/
 }
 
 .slider {
     position: fixed;
     background-color: #000;
     width: auto;
-/*    padding-left: 50px;
-*/    white-space: nowrap;
-
+    white-space: nowrap;
     height: 100vh;
     overflow: hidden;
 }
@@ -287,11 +275,7 @@ a:link {
 
 .no-gradient:hover {
     opacity: 1;
-    /*background: linear-gradient(-180deg, #EE7752, #23A6D5, #23D5AB, #EE7752, #E73C7E, #23A6D5, #23D5AB, #EE7752, #23D5AB, #EE7752, #E73C7E, #23A6D5);*/
     background-size: 200% 100%;
-/*   -webkit-animation: gradient 15s ease infinite;
-   -moz-animation: gradient 15s ease infinite;
-   animation: gradient 15s ease infinite;*/
     position: absolute;
 	margin-left: 75px;
 	z-index: 5;
@@ -302,14 +286,6 @@ a:link {
     -webkit-overflow: hidden;
 }  
 
-/*@keyframes gradient {
-    0% {background-position: 0% 10%;}
-    25% {background-position: 0% 30%;}
-    50% {background-position: 0% 70%;}
-    75% {background-position: 0% 90%;}
-    100% {background-position: 0% 100%;}
-}*/
-
 .constantGradient{
     opacity: 1;
 }
@@ -318,8 +294,7 @@ a:link {
     height: 100%; 
     width: 100%; 
 	pointer-events: none;
-/*    margin-left: 10px;
-*/    margin-right: 70px;
+    margin-right: 70px;
 }
 
 #video-2 { 
@@ -329,7 +304,6 @@ a:link {
     margin-left: 50px;
     margin-right: 50px;
 }
-
 
 /* from grid_test_2 */
 
@@ -431,11 +405,6 @@ h3 {
     flex-wrap: wrap;
     padding: 100px 0 0 100px;
 }
-
-/*.column {
-    flex: 50%;
-    padding: 0 4px;
-}*/
 
 .column {
     display: inline-block;
@@ -551,20 +520,12 @@ h3 {
 
     body {
         overscroll-behavior: auto;
-        /*overflow-x: hidden;
-        -webkit-overflow-x: hidden;*/
         height: auto;
         overflow: scroll;
     }
 
-/*    .mobileWrapper {
-        overflow-x: hidden;
-        -webkit-overflow-x: hidden;
-    }*/
-
     .intro {
-        /*overflow-x: hidden;
-        -webkit-overflow-x: hidden;*/
+    
     }
 
     .menu-items {
@@ -582,16 +543,11 @@ h3 {
     }
 
     .intro {
-/*        width: 150%;
-*/    }
+
+    }
 
     #video {
-        /*top: 10% !important;
-        left: -15% !important;
-        width: 115% !important;
-        height: 115% !important;*/ 
-        /*overflow-x: hidden;
-        -webkit-overflow-x: hidden;*/
+
     }
 
     #video-frame {
@@ -616,14 +572,10 @@ h3 {
     .slider {
         position: relative;
         padding-left: 0;
-/*        height: 100%;
-        width: 100vw;*/
         max-width: 100vw;
-/*        overflow-x: auto;
-*/        white-space: normal;
+        white-space: normal;
         overflow: visible;
-/*        -webkit-overflow-x: hidden;
-*/    }
+    }
     
     #full-carousel {
         height: inherit;
