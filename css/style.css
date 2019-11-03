@@ -318,7 +318,7 @@ a:link {
     height: 100%; 
     width: 100%; 
 	pointer-events: none;
-/*    margin-left: 50px;
+/*    margin-left: 10px;
 */    margin-right: 70px;
 }
 
@@ -499,10 +499,10 @@ h3 {
 
 #video { 
     position:absolute; 
-    top:-90%; 
-    left:-50%; 
-    width:200%; 
-    height:200%; 
+    top:-120%; 
+    left:-125%; 
+    width:350%; 
+    height:350%; 
 
 }
 
@@ -670,6 +670,7 @@ h3 {
 
     #video {
         height: 250%;
+        top: -80%;
     }
 
     #video-1, #video-2 {
