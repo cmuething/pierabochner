@@ -110,7 +110,7 @@
 
         <script type="text/javascript">
         //scroll horizontally on vertical scrolling, but only when on desktop size screens
-        // $(document).ready(function(){   
+        $(document).ready(function(){   
 
             function responsiveTest() {
 
@@ -140,6 +140,8 @@
                     var oldScrollTop = $(window).scrollTop();
                     var oldScrollLeft = $(window).scrollLeft();
 
+                    function noop() {};
+
 //remove from here
 
                     Site.body = $('body');
@@ -160,6 +162,12 @@
                     if (scroll >= pos.top && scroll >= $(window).height()) {
                         $("body").addClass("at-the-bottom");
                         $('#intro-video').addClass('fixed-video');
+
+                        // function foo() {
+                        //     window.scrollTo(0,0);
+                        //     foo = noop;
+                        // };
+
                          // $("html, body").mousewheel(function(event, delta) {
 
                          //    this.scrollLeft -= (delta * .15);
@@ -186,7 +194,7 @@
                         }
 
                         $(window).on('scroll', Site.scrollProject);
-                      }
+                    }
 
                       Site.scrollProject = function(){
                             var scroll = $(document).scrollTop();
@@ -280,7 +288,7 @@
             responsiveTest(x) // Call listener function at run time
             x.addListener(responsiveTest) // Attach listener function on state changes
 
-            // }) 
+            }); 
 
         </script>
 

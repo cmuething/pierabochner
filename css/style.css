@@ -243,12 +243,6 @@ a:link {
     width: 0;
 }
 
-/*.fixed-video {
-    display: none;
-    opacity: 0;
-}
-*/
-
 .fixed-video {
     display: none;
 }
@@ -325,7 +319,7 @@ a:link {
     width: 100%; 
 	pointer-events: none;
 /*    margin-left: 50px;
-*/    margin-right: 90px;
+*/    margin-right: 70px;
 }
 
 #video-2 { 
@@ -335,6 +329,7 @@ a:link {
     margin-left: 50px;
     margin-right: 50px;
 }
+
 
 /* from grid_test_2 */
 
@@ -632,13 +627,17 @@ h3 {
     
     #full-carousel {
         height: inherit;
-        transform: translateX(0);
+        transform: translateX(0) !important;
     }
 
     .slide {
         width: 100vw;
         display: block;
         pointer-events: none;
+    }
+
+    .slide a {
+        padding-left: 0px;
     }
 
     .small {
@@ -675,6 +674,7 @@ h3 {
 
     #video-1, #video-2 {
         margin-left: 0px;
+        margin-right: 0px;
     }
 
     #video-2 {
