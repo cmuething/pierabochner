@@ -148,6 +148,7 @@
                     Site.document_height = $(document).height() - Site.window_height;
                     // var font_size = parseInt($('html').css('font-size'));
                     Site.image_width = 0;
+                    Site.attribution = $('attribution');
 
 //to here
 
@@ -174,7 +175,7 @@
                     if (Site.body.hasClass("at-the-bottom")) {
                         // $(document).imagesLoaded(function(){
                           $('.slide').each(function(){
-                            Site.image_width = Site.image_width + $(this).outerWidth() + (120);
+                            Site.image_width = Site.image_width + $(this).outerWidth() + (110);
                           });
                         // })
 
@@ -313,7 +314,7 @@
             </div>
         </div>
 
-        <div class="intro intro-lock" id="intro-video">
+        <div class="intro" id="intro-video">
             <div id="video-frame">
                 <iframe id="video" src="https://player.vimeo.com/video/290171567?api=1&background=1&autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                 </iframe>
