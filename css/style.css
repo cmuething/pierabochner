@@ -213,6 +213,7 @@ a:link {
 #full-carousel {
     height: 100%;
     flex-wrap: nowrap;
+    background-color: #000000;
 }
 
 .gap {
@@ -244,12 +245,13 @@ a:link {
     display: inline-block;
     height: 100%;
     background-color: #000;
+    margin-right: 50px;
 }
 
 .slide a {
-    pointer-events: cursor;
+    /*pointer-events: cursor;
     overflow: auto;
-    padding-left: 50px;
+    padding-left: 50px;*/
 }
 
 .slide p {
@@ -261,14 +263,15 @@ a:link {
     color: white;
     bottom: 0;
     width: 100%;
-    padding-left: 50px;
-}
+/*    padding-left: 50px;
+*/}
 
 .no-gradient {
     opacity: 0;
     position: absolute;
-	margin-left: 75px;
-	z-index: 5;
+/*	margin-left: 75px;
+*/	z-index: 5;
+    left: -25%;
 	height: 100%;
 	width: 100%;
 }
@@ -281,7 +284,7 @@ a:link {
 	z-index: 5;
 	mix-blend-mode: multiply;
 	height: 100%;
-	max-width: 90%;
+	max-width: 100%;
     overflow: hidden;
     -webkit-overflow: hidden;
 }  
@@ -291,10 +294,10 @@ a:link {
 }
 
 #video-1 { 
-    height: 100%; 
+    height: 125%; 
     width: 100%; 
 	pointer-events: none;
-    margin-right: 70px;
+    padding-top: 25%;
 }
 
 #video-2 { 
@@ -580,6 +583,7 @@ h3 {
     #full-carousel {
         height: inherit;
         transform: translateX(0) !important;
+        background-color: #000000;
     }
 
     .slide {
