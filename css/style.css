@@ -160,7 +160,7 @@ a:link {
   background-color: #ffffff; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   -webkit-overflow-x: hidden;
-  padding-top: 80px; /* Place content 60px from the top */
+  padding-top: 60px; /* Place content 60px from the top */
   transition: 0s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
