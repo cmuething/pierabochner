@@ -662,12 +662,16 @@ h3 {
         width: 660px;
     }
 
+    .no-gradient:hover {
+        margin-left: 175px;
+    }
+
     .slide a {
-        margin-left: -25%;
+        /*margin-left: -25%;*/
     }
 
     #video-1, #video-2 {
-        width: 150%;
+        /*width: 150%;*/
     }
 
 }
