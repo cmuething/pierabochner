@@ -669,7 +669,7 @@ h3 {
     }
 
     .no-gradient:hover {
-        /*margin-left: 175px;*/
+        margin-left: 0px;
     }
 
     #video-1, #video-2 {
