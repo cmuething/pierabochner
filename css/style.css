@@ -590,7 +590,6 @@ h3 {
     .slide {
         width: 100vw;
         display: block;
-        /*pointer-events: none;*/
     }
 
     .slide a {
