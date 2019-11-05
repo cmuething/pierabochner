@@ -612,9 +612,9 @@ h3 {
     }
 
     .no-gradient:hover {
-        opacity: 0;
+        margin-left: 0px;
     }
-    
+
     .gradient-test {
         opacity: 1;
         transition: opacity 1s ease;
