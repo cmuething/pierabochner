@@ -7,7 +7,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<meta name="description" content="Piera Bochner is an artist and designer based in Brooklyn, NY. This candle project was birthed from a love of the material of wax and a desire to investigate how wicks, wax, and flames will travel down new and unconventional paths. The shapes come from pre-existing forms, like romanesco broccolis and bitter melons, plucked from the produce stands of Chinatown, Union Square, and the supermarkets of Berlin, then turned into rubber silicone molds. To create the candles, different colored waxes are individually melted and poured into the molds, waiting for each to cool and harden before adding the next, creating the layered effect. The different mixtures of wax colors combined with the melting power of the flame creates endless variations of the original form. The candle becomes both a functional object when its purpose is enacted, as well as an ever-changing sculptural form when inert.">
-        
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="js/jquery.mousewheel.js"></script>
         <script type="text/javascript">
@@ -78,41 +78,41 @@
                 function firstColour(){
                     // if (window.pageYOffset > sticky) {
                     randomColourOne = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-                    
+
                     randomColourTwo = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-                
+
                     randomColourThree = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
 
                     randomColourFour = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-                    
+
                     randomColourFive = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-                
+
                     randomColourSix = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
 
                     randomColourSeven = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-                    
+
                     randomColourEight = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-                
+
                     randomColourNine = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-                    
+
                     var background = document.querySelectorAll('#background1, #background2, #background3, #background4, #background5, #background6, #background7');
 
                     for (var i = 0; i < background.length; i++)
                     {
 
                     background[i].style.backgroundImage = "-webkit-linear-gradient("+ randomColourOne +" , "+ randomColourTwo +" ,  "+ randomColourThree +" , "+ randomColourFour +" , "+ randomColourFive +" , "+ randomColourSix +" , "+ randomColourSeven +" , "+ randomColourEight +" , "+ randomColourNine +")";
-                    
+
                     // localStorage.setItem("copyColor", "-webkit-linear-gradient("+ randomColourOne +" , "+ randomColourTwo +" ,  "+ randomColourThree +" , "+ randomColourFour +" , "+ randomColourFive +" , "+ randomColourSix +" , "+ randomColourSeven +" , "+ randomColourEight +" , "+ randomColourNine +")");
 
                     }
 
             }
-            
+
         </script>
 
         <script type="text/javascript">
         //scroll horizontally on vertical scrolling, but only when on desktop size screens
-        $(document).ready(function(){   
+        $(document).ready(function(){
 
             function responsiveTest() {
 
@@ -126,9 +126,9 @@
 
                     Site = {}
 
-                $(window).scroll(function() { 
+                $(window).scroll(function() {
 
-                    var scroll = $(window).scrollTop();  
+                    var scroll = $(window).scrollTop();
 
                     var s = $(".slider");
                     var pos = s.position();
@@ -203,7 +203,7 @@
                             Site.scroll_position = scroll/Site.document_height * Site.image_width;
                             // console.log(Site.image_width);
                             $('#full-carousel').css('transform', 'translateX(-' + Site.scroll_position + 'px)')
-                    }  
+                    }
 
 //to here
 
@@ -213,10 +213,10 @@
 
                     else {
                         $("body").removeClass('at-the-left-edge');
-                        $('#intro-video').addClass('fixed-video'); 
+                        $('#intro-video').addClass('fixed-video');
 
                         }
-                       
+
                     });
 
                 }
@@ -234,11 +234,11 @@
 
                     var debounce;
                     var loadGradient = false;
-                    
+
                     (function($) {
 
                     $.fn.visible = function(partial) {
-            
+
                           var $t            = $(this),
                               $w            = $(window),
                               viewTop       = $w.scrollTop(),
@@ -247,11 +247,11 @@
                               _bottom       = _top + $t.height(),
                               compareTop    = partial === true ? _bottom : _top,
                               compareBottom = partial === true ? _top : _bottom;
-                        
+
                         return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 
                       };
-                        
+
                     })(jQuery);
 
                     $(window).scroll(function(event) {
@@ -260,7 +260,7 @@
 
                       $(".no-gradient").each(function(i, el) {
                         var el = $(el);
-                        if (el.visible(true)) { 
+                        if (el.visible(true)) {
                           el.addClass("gradient-test");
                         } else {
                           el.removeClass("gradient-test");
@@ -290,7 +290,7 @@
             responsiveTest(x) // Call listener function at run time
             x.addListener(responsiveTest) // Attach listener function on state changes
 
-            }); 
+            });
 
         </script>
 
@@ -317,6 +317,7 @@
 
         <div class="sidenav" id="sidenav-toggle" >
             <div class="table">
+								<a href="https://pierabochner.bigcartel.com/products/">View All</a>
                 <a href="https://pierabochner.bigcartel.com/stockists">Stockists</a>
                 <a href="https://pierabochner.bigcartel.com/about">About</a>
                 <a href="https://pierabochner.bigcartel.com/contact">Contact</a>
@@ -353,7 +354,7 @@
                             </iframe>
                         </a>
                     </div>
-                        
+
                     <div class="slide">
                         <a href="https://pierabochner.bigcartel.com/category/kiwano">
                             <p>Kiwano</p>
@@ -362,8 +363,8 @@
                             </iframe>
                         </a>
                     </div>
-                    
-                        
+
+
                     <div class="slide">
                         <a href="https://pierabochner.bigcartel.com/category/bumpy-gourd">
                             <p>Bumpy Gourd</p>
@@ -372,7 +373,7 @@
                             </iframe>
                         </a>
                     </div>
-                    
+
                     <div class="slide">
                         <a href="https://pierabochner.bigcartel.com/category/bitter-melon">
                             <p>Bitter Melon</p>
@@ -406,7 +407,7 @@
                     <div class="attribution">
                         <p>site designed & developed by connor muething</p>
                     </div>
-                </div>    
+                </div>
             </div>
-    </body>	
+    </body>
 </html>
