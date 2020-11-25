@@ -95,7 +95,7 @@
 
                     randomColourNine = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
 
-                    var background = document.querySelectorAll('#background1, #background2, #background3, #background4, #background5, #background6, #background7');
+                    var background = document.querySelectorAll('#background1, #background2, #background3, #background4, #background5, #background6, #background7, #background8, #background9, #background10, #background11');
 
                     for (var i = 0; i < background.length; i++)
                     {
@@ -158,7 +158,8 @@
 
                     if (scroll >= 10) {
                         $(".slider").addClass("scrolled");
-                        $(".caret").addClass("scrolledDown");
+                        $(".caret-down").addClass("scrolledDown");
+												$(".caret-right").removeClass("scrolledDown");
                     }
 
                     if (scroll >= pos.top && scroll >= $(window).height()) {
@@ -273,10 +274,11 @@
                             }, 1000);
 
                         if (scroll >= 10) {
-                        $(".caret").addClass("scrolledDown");
+                        $(".caret-down").addClass("scrolledDown");
+												// $(".caret-right").removeClass("scrolledDown");
                     }
-                        if ($(".caret").hasClass('scrolledDown') && scroll == 0) {
-                        $(".caret").removeClass("scrolledDown");
+                        if ($(".caret-down").hasClass('scrolledDown') && scroll == 0) {
+                        $(".caret-down").removeClass("scrolledDown");
                         }
                     });
 
@@ -311,8 +313,12 @@
             </div>
 		</nav>
 
-        <div class="caret">
+        <div class="caret-down">
             <p><i class="arrow down"></i></p>
+        </div>
+
+				<div class="caret-right scrolledDown">
+            <p><i class="arrow right"></i></p>
         </div>
 
         <div class="sidenav" id="sidenav-toggle" >
@@ -397,6 +403,42 @@
                             <p>Starfruit</p>
                             <div class="no-gradient" id="background7"></div>
                             <iframe id="video-1" src="https://player.vimeo.com/video/370786019?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        </a>
+                    </div>
+
+										<div class="slide">
+                        <a href="https://pierabochner.bigcartel.com/category/quince">
+                            <p>Quince</p>
+                            <div class="no-gradient" id="background8"></div>
+                            <iframe id="video-1" src="https://player.vimeo.com/video/478333363?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        </a>
+                    </div>
+
+										<div class="slide" id="tallOne">
+                        <a href="https://pierabochner.bigcartel.com/category/snake-squash">
+                            <p>Snake Squash</p>
+                            <div class="no-gradient" id="background9"></div>
+                            <iframe id="video-1" src="https://player.vimeo.com/video/479560855?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        </a>
+                    </div>
+
+										<div class="slide" id="largeOne">
+                        <a href="https://pierabochner.bigcartel.com/category/table-gourd">
+                            <p>Table Gourd</p>
+                            <div class="no-gradient" id="background10"></div>
+                            <iframe id="video-1" src="https://player.vimeo.com/video/478333557?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        </a>
+                    </div>
+
+										<div class="slide">
+                        <a href="https://pierabochner.bigcartel.com/category/heirloom">
+                            <p>Heirloom</p>
+                            <div class="no-gradient" id="background11"></div>
+                            <iframe id="video-1" src="https://player.vimeo.com/video/482927610?autoplay=1&loop=1&autopause=0&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                             </iframe>
                         </a>
                     </div>
